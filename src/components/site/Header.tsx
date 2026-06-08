@@ -124,11 +124,11 @@ export function Header() {
                   <ul className="border-l-[3px] border-accent pl-4 space-y-3">
                     {vesselCategories.map((cat) => (
                       <li key={cat}>
-                        <a
-                          href="#"
-                          className="underline-hover text-sm text-primary/65 transition-colors hover:text-accent"
-                        >
-                          {cat}
+                        <a href="#" className="group inline-block cursor-pointer">
+                          <span className="block text-sm text-primary/65 transition-colors group-hover:text-accent">
+                            {cat}
+                          </span>
+                          <span className="block h-[2px] w-0 bg-accent transition-all duration-300 group-hover:w-full" />
                         </a>
                       </li>
                     ))}

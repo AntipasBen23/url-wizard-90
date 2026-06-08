@@ -1,11 +1,21 @@
-import { useEffect, useState } from "react";
-import { Search, Menu, X, ExternalLink, LifeBuoy } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Search, Menu, X, ExternalLink, LifeBuoy, ChevronRight } from "lucide-react";
 
 const primaryNav = ["Vessels", "Equipment", "Markets", "Services", "About"];
 
+const vesselCategories = [
+  "Tugs",
+  "Workboats",
+  "Pilot & Tender Vessels",
+  "Ferries",
+  "Dredgers",
+];
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [dropdown, setDropdown] = useState<string | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -14,40 +24,66 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close dropdown when clicking outside the header
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const dropdownOpen = dropdown !== null;
+
+  // When dropdown is open, header turns white; otherwise follow scroll state
+  const headerBg = dropdownOpen
+    ? "bg-white shadow-md"
+    : scrolled
+    ? "bg-primary/95 backdrop-blur-md shadow-lg"
+    : "bg-gradient-to-b from-black/40 to-transparent";
+
+  const textBase = dropdownOpen ? "text-primary" : "text-primary-foreground";
+  const textMuted = dropdownOpen ? "text-primary/70 hover:text-primary" : "text-primary-foreground/85 hover:text-primary-foreground";
+
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-primary/95 backdrop-blur-md shadow-lg" : "bg-gradient-to-b from-black/40 to-transparent"
-      }`}
-    >
-      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-5 lg:px-10 text-primary-foreground">
+    <header ref={headerRef} className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${headerBg}`}>
+      <div className={`mx-auto flex h-20 max-w-[1400px] items-center justify-between px-5 lg:px-10 ${textBase}`}>
+
         {/* Left nav */}
         <nav className="hidden items-center gap-7 lg:flex">
           {primaryNav.map((item) => (
-            <a
+            <button
               key={item}
-              href="#"
-              className="text-sm font-medium text-primary-foreground/85 transition-colors hover:text-primary-foreground"
+              onClick={() => setDropdown(dropdown === item ? null : item)}
+              className={`relative text-sm font-medium transition-colors ${
+                dropdown === item ? "text-accent" : textMuted
+              }`}
             >
               {item}
-            </a>
+              {/* Active underline indicator */}
+              {dropdown === item && (
+                <span className="absolute -bottom-[30px] left-0 h-[3px] w-full bg-accent" />
+              )}
+            </button>
           ))}
         </nav>
 
         {/* Center logo */}
-        <a href="/" className="damen-logo absolute left-1/2 -translate-x-1/2 text-2xl text-primary-foreground">
+        <a href="/" className={`damen-logo absolute left-1/2 -translate-x-1/2 text-2xl transition-colors ${textBase}`}>
           B&R MARINE
         </a>
 
         {/* Right cluster */}
         <div className="ml-auto hidden items-center gap-6 lg:flex">
-          <a href="#news" className="text-sm font-medium text-primary-foreground/85 hover:text-primary-foreground">
+          <a href="#news" className={`text-sm font-medium transition-colors ${textMuted}`}>
             News &amp; Insights
           </a>
-          <a href="#" className="inline-flex items-center gap-1 text-sm font-medium text-primary-foreground/85 hover:text-primary-foreground">
+          <a href="#" className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${textMuted}`}>
             Career <ExternalLink className="h-3.5 w-3.5" />
           </a>
-          <button aria-label="Search" className="text-primary-foreground/85 hover:text-primary-foreground">
+          <button aria-label="Search" className={`transition-colors ${textMuted}`}>
             <Search className="h-5 w-5" />
           </button>
           <a
@@ -60,15 +96,77 @@ export function Header() {
 
         {/* Mobile toggle */}
         <button
-          onClick={() => setOpen((o) => !o)}
-          className="ml-auto text-primary-foreground lg:hidden"
+          onClick={() => setMobileOpen((o) => !o)}
+          className={`ml-auto transition-colors lg:hidden ${textBase}`}
           aria-label="Menu"
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {open && (
+      {/* ── Vessels mega-menu ── */}
+      {dropdown === "Vessels" && (
+        <div className="border-t border-gray-100 bg-white shadow-xl">
+          <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+            <div className="grid grid-cols-[280px_1fr] py-8 gap-10">
+
+              {/* Left column */}
+              <div className="border-r border-gray-100 pr-10">
+                <a
+                  href="#"
+                  className="flex items-center justify-between text-base font-bold text-primary hover:text-accent transition-colors"
+                >
+                  Our vision on vessels
+                  <ChevronRight className="h-5 w-5 shrink-0" />
+                </a>
+                <div className="mt-6">
+                  <p className="eyebrow mb-4">Vessel Categories</p>
+                  <ul className="border-l-[3px] border-accent pl-4 space-y-3">
+                    {vesselCategories.map((cat) => (
+                      <li key={cat}>
+                        <a
+                          href="#"
+                          className="text-sm text-primary/65 hover:text-accent transition-colors"
+                        >
+                          {cat}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Right column – featured card */}
+              <div>
+                <div className="relative h-[260px] overflow-hidden rounded-sm bg-primary/10">
+                  {/* TODO: replace with actual vessels image */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/30 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
+                    <p className="eyebrow text-accent mb-2">Proven design, short term delivery</p>
+                    <h3 className="text-2xl font-bold">Vessels in stock</h3>
+                    <button className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
+                      More information <ChevronRight className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Bottom bar */}
+            <div className="border-t border-gray-100 py-4 text-sm text-primary/55">
+              Questions?{" "}
+              <a href="#contact" className="font-medium text-accent hover:underline" onClick={() => setDropdown(null)}>
+                Contact us
+              </a>{" "}
+              and get in touch with the experts in the field.
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mobile menu */}
+      {mobileOpen && (
         <div className="border-t border-white/10 bg-primary px-5 py-4 text-primary-foreground lg:hidden">
           <nav className="flex flex-col gap-3">
             {[...primaryNav, "News & Insights", "Career"].map((item) => (

@@ -77,7 +77,7 @@ export function Header() {
                     left: 0,
                     height: isActive ? "3px" : "1.5px",
                     width: isActive || isNavHovered ? "100%" : "0",
-                    backgroundColor: "oklch(0.55 0.2 262)",
+                    backgroundColor: "white",
                     transition: "width 0.3s ease",
                   }}
                 />

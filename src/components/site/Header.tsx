@@ -75,7 +75,7 @@ export function Header() {
                     position: "absolute",
                     bottom: isActive ? "-30px" : "-4px",
                     left: 0,
-                    height: isActive ? "3px" : "1.5px",
+                    height: isActive ? "2px" : "1px",
                     width: isActive || isNavHovered ? "100%" : "0",
                     backgroundColor: "white",
                     transition: "width 0.3s ease",

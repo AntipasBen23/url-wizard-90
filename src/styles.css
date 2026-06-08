@@ -190,6 +190,32 @@
     width: 100%;
   }
 
+  /* Dropdown category link hover effects */
+  .vessel-cat-link {
+    cursor: pointer !important;
+    display: block;
+  }
+  .vessel-cat-link .cat-text {
+    display: block;
+    font-size: 0.875rem;
+    opacity: 0.65;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+  .vessel-cat-link:hover .cat-text {
+    color: var(--accent) !important;
+    opacity: 1;
+  }
+  .vessel-cat-link .cat-bar {
+    display: block;
+    height: 2px;
+    background-color: var(--accent);
+    width: 0;
+    transition: width 0.3s ease;
+  }
+  .vessel-cat-link:hover .cat-bar {
+    width: 100%;
+  }
+
   /* Damen-style blocky logo wordmark */
   .damen-logo {
     font-family: var(--font-heading);

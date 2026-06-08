@@ -121,29 +121,6 @@ export function Header() {
                 </a>
                 <div className="mt-6">
                   <p className="eyebrow mb-4">Vessel Categories</p>
-                  <style>{`
-                    .vessel-cat-link { cursor: pointer; display: block; }
-                    .vessel-cat-link .cat-text {
-                      display: block;
-                      font-size: 0.875rem;
-                      opacity: 0.65;
-                      transition: color 0.2s, opacity 0.2s;
-                    }
-                    .vessel-cat-link:hover .cat-text {
-                      color: var(--accent);
-                      opacity: 1;
-                    }
-                    .vessel-cat-link .cat-bar {
-                      display: block;
-                      height: 2px;
-                      background-color: var(--accent);
-                      width: 0;
-                      transition: width 0.3s ease;
-                    }
-                    .vessel-cat-link:hover .cat-bar {
-                      width: 100%;
-                    }
-                  `}</style>
                   <ul className="border-l-[3px] border-accent pl-4 space-y-3">
                     {vesselCategories.map((cat) => (
                       <li key={cat}>

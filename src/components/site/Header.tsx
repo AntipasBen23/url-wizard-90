@@ -15,7 +15,6 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
-  const [hoveredCat, setHoveredCat] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -122,31 +121,35 @@ export function Header() {
                 </a>
                 <div className="mt-6">
                   <p className="eyebrow mb-4">Vessel Categories</p>
+                  <style>{`
+                    .vessel-cat-link { cursor: pointer; display: block; }
+                    .vessel-cat-link .cat-text {
+                      display: block;
+                      font-size: 0.875rem;
+                      opacity: 0.65;
+                      transition: color 0.2s, opacity 0.2s;
+                    }
+                    .vessel-cat-link:hover .cat-text {
+                      color: var(--accent);
+                      opacity: 1;
+                    }
+                    .vessel-cat-link .cat-bar {
+                      display: block;
+                      height: 2px;
+                      background-color: var(--accent);
+                      width: 0;
+                      transition: width 0.3s ease;
+                    }
+                    .vessel-cat-link:hover .cat-bar {
+                      width: 100%;
+                    }
+                  `}</style>
                   <ul className="border-l-[3px] border-accent pl-4 space-y-3">
                     {vesselCategories.map((cat) => (
                       <li key={cat}>
-                        <a
-                          href="#"
-                          style={{ cursor: "pointer" }}
-                          onMouseEnter={() => setHoveredCat(cat)}
-                          onMouseLeave={() => setHoveredCat(null)}
-                        >
-                          <span style={{
-                            display: "block",
-                            fontSize: "0.875rem",
-                            color: hoveredCat === cat ? "var(--accent)" : undefined,
-                            opacity: hoveredCat === cat ? 1 : 0.65,
-                            transition: "color 0.2s, opacity 0.2s",
-                          }}>
-                            {cat}
-                          </span>
-                          <span style={{
-                            display: "block",
-                            height: "2px",
-                            backgroundColor: "var(--accent)",
-                            width: hoveredCat === cat ? "100%" : "0",
-                            transition: "width 0.3s ease",
-                          }} />
+                        <a href="#" className="vessel-cat-link">
+                          <span className="cat-text">{cat}</span>
+                          <span className="cat-bar" />
                         </a>
                       </li>
                     ))}

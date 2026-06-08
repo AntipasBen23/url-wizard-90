@@ -36,7 +36,7 @@ export function Header() {
 
         {/* Center logo */}
         <a href="/" className="damen-logo absolute left-1/2 -translate-x-1/2 text-2xl text-primary-foreground">
-          DAMEN
+          B&R MARINE
         </a>
 
         {/* Right cluster */}

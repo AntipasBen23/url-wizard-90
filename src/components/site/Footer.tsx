@@ -3,7 +3,7 @@ import { Linkedin, Youtube, Instagram, Facebook } from "lucide-react";
 const columns = [
   {
     title: "Popular content",
-    links: ["About Damen", "Career", "How we Build", "News", "Whitepapers"],
+    links: ["About B & R Marine Energy Logistics", "Career", "How we Build", "News", "Whitepapers"],
   },
   {
     title: "Useful links",
@@ -21,9 +21,9 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 py-16 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_repeat(3,1fr)]">
           <div>
-            <div className="damen-logo text-3xl">DAMEN</div>
+            <div className="damen-logo text-3xl">B&R MARINE</div>
             <p className="mt-4 max-w-xs text-sm text-primary-foreground/60">
-              Building ships since 1927. An international shipyard group with family roots.
+              B & R Marine Energy Logistics. Your trusted partner in maritime energy solutions.
             </p>
             <div className="mt-6 flex gap-3">
               {[Linkedin, Youtube, Instagram, Facebook].map((Icon, i) => (
@@ -54,7 +54,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-primary-foreground/50 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Damen Shipyards Group. Replica for demonstration.</span>
+          <span>© {new Date().getFullYear()} B & R Marine Energy Logistics.</span>
           <div className="flex gap-5">
             <a href="#" className="hover:text-primary-foreground">Privacy</a>
             <a href="#" className="hover:text-primary-foreground">Cookies</a>

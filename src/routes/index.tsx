@@ -20,13 +20,13 @@ import news3 from "@/assets/news-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Damen | We are Damen — Building ships since 1927" },
+      { title: "B & R Marine Energy Logistics | Who We Are" },
       {
         name: "description",
         content:
-          "Damen is an international shipyard group building vessels, equipment and maritime services across 35 shipyards on 5 continents.",
+          "B & R Marine Energy Logistics is your trusted partner in maritime energy solutions and logistics services.",
       },
-      { property: "og:title", content: "Damen | We are Damen" },
+      { property: "og:title", content: "B & R Marine Energy Logistics" },
       { property: "og:description", content: "An ocean of possibilities. Building ships since 1927." },
       { property: "og:image", content: "/og-image.jpg" },
     ],
@@ -46,7 +46,7 @@ const spotlight = [
   {
     img: spotlightSustainability,
     title: "Our ambition",
-    text: "Damen has the ambition to become the most sustainable maritime solution provider in the world.",
+    text: "B & R Marine Energy Logistics has the ambition to become the most sustainable maritime energy logistics provider in the world.",
   },
   {
     img: spotlightDefence,
@@ -59,17 +59,17 @@ const news = [
   {
     img: news1,
     date: "3 Jun 2026",
-    title: "Damen announces expansion of Combi Freighter series",
+    title: "B & R Marine Energy Logistics announces expansion of energy logistics services",
   },
   {
     img: news2,
     date: "29 May 2026",
-    title: "Damen delivers Landing Utility Vessel 2208 to Blueshell Mussels",
+    title: "B & R Marine Energy Logistics delivers new vessel to partner fleet",
   },
   {
     img: news3,
     date: "28 May 2026",
-    title: "Two Damen SARs 1605 FRP enter service with Brazilian Navy",
+    title: "Two B & R Marine vessels enter service with new maritime operator",
   },
 ];
 
@@ -97,7 +97,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-black/30" />
         <div className="relative mx-auto w-full max-w-[1400px] px-5 lg:px-10">
           <h1 className="max-w-3xl text-5xl font-bold leading-[0.95] text-primary-foreground sm:text-7xl lg:text-8xl">
-            We are Damen
+            We are B & R Marine Energy Logistics
           </h1>
           <a
             href="#contact"
@@ -122,9 +122,9 @@ function Index() {
           <p className="eyebrow">An ocean of possibilities</p>
           <h2 className="mt-5 text-4xl font-bold text-primary sm:text-5xl">Building ships since 1927</h2>
           <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
-            Damen is an international shipyard group but at its heart, there is still a family company. We operate in
-            every market where we see an opportunity to improve, innovate or invest. At Damen we make time to listen to
-            our clients. Our open, collaborative approach has been a key driver of our product portfolio's evolution.
+            B & R Marine Energy Logistics is an international maritime energy logistics company but at its heart, there is still a family company. We operate in
+            every market where we see an opportunity to improve, innovate or invest. At B & R Marine we make time to listen to
+            our clients. Our open, collaborative approach has been a key driver of our service portfolio's evolution.
             Exceeding your expectations is our most important goal; after all, it's your future we're building.
           </p>
         </div>
@@ -239,7 +239,7 @@ function Index() {
             href="#"
             className="mt-10 inline-flex items-center gap-2 border-2 border-white/70 px-7 py-4 text-sm font-semibold transition-colors hover:bg-primary-foreground hover:text-primary"
           >
-            Find Damen companies <ArrowRight className="h-4 w-4" />
+            Find B & R Marine companies <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </section>

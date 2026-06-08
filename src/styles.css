@@ -16,7 +16,7 @@
 }
 
 @theme inline {
-  --animate-slide-down: slideDown 0.7s ease-out;
+  --animate-slide-down: slideDown 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /*

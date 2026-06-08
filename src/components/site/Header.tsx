@@ -126,7 +126,7 @@ export function Header() {
                       <li key={cat}>
                         <a
                           href="#"
-                          className="relative inline-block cursor-pointer text-sm text-primary/65 transition-colors hover:text-accent after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+                          className="relative inline-block cursor-pointer text-sm text-primary/65 transition-colors hover:text-accent after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
                         >
                           {cat}
                         </a>

@@ -15,6 +15,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
+  const [hoveredCat, setHoveredCat] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -122,14 +123,40 @@ export function Header() {
                 <div className="mt-6">
                   <p className="eyebrow mb-4">Vessel Categories</p>
                   <ul className="border-l-[3px] border-accent pl-4 space-y-3">
-                    {vesselCategories.map((cat) => (
-                      <li key={cat}>
-                        <a href="#" className="vessel-cat-link">
-                          <span className="cat-text">{cat}</span>
-                          <span className="cat-bar" />
-                        </a>
-                      </li>
-                    ))}
+                    {vesselCategories.map((cat) => {
+                      const isHovered = hoveredCat === cat;
+                      return (
+                        <li key={cat}>
+                          <a
+                            href="#"
+                            style={{ cursor: "pointer", display: "block", textDecoration: "none" }}
+                            onMouseEnter={() => setHoveredCat(cat)}
+                            onMouseLeave={() => setHoveredCat(null)}
+                          >
+                            <span
+                              style={{
+                                display: "block",
+                                fontSize: "0.875rem",
+                                opacity: isHovered ? 1 : 0.65,
+                                color: isHovered ? "oklch(0.55 0.2 262)" : "inherit",
+                                transition: "color 0.2s ease, opacity 0.2s ease",
+                              }}
+                            >
+                              {cat}
+                            </span>
+                            <span
+                              style={{
+                                display: "block",
+                                height: "2px",
+                                backgroundColor: "oklch(0.55 0.2 262)",
+                                width: isHovered ? "100%" : "0",
+                                transition: "width 0.3s ease",
+                              }}
+                            />
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>

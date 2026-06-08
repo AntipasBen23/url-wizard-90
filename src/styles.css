@@ -6,15 +6,17 @@
 
 @keyframes slideDown {
   from {
-    clip-path: inset(0 0 100% 0);
+    max-height: 0;
+    opacity: 0;
   }
   to {
-    clip-path: inset(0 0 0% 0);
+    max-height: 600px;
+    opacity: 1;
   }
 }
 
 @theme inline {
-  --animate-slide-down: slideDown 0.8s ease-in-out;
+  --animate-slide-down: slideDown 0.8s ease-in-out forwards;
 }
 
 /*

@@ -106,7 +106,7 @@ export function Header() {
 
       {/* ── Vessels mega-menu ── */}
       {dropdown === "Vessels" && (
-        <div className="animate-slide-down border-t border-gray-100 bg-white shadow-xl">
+        <div className="animate-slide-down overflow-hidden border-t border-gray-100 bg-white shadow-xl">
           <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
             <div className="grid grid-cols-[280px_1fr] py-8 gap-10">
 

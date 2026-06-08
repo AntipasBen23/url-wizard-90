@@ -16,6 +16,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
   const [hoveredCat, setHoveredCat] = useState<string | null>(null);
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -54,21 +55,35 @@ export function Header() {
 
         {/* Left nav */}
         <nav className="hidden items-center gap-7 lg:flex">
-          {primaryNav.map((item) => (
-            <button
-              key={item}
-              onClick={() => setDropdown(dropdown === item ? null : item)}
-              className={`relative text-sm font-medium transition-colors ${
-                dropdown === item ? "text-accent" : textMuted
-              }`}
-            >
-              {item}
-              {/* Active underline indicator */}
-              {dropdown === item && (
-                <span className="absolute -bottom-[30px] left-0 h-[3px] w-full bg-accent" />
-              )}
-            </button>
-          ))}
+          {primaryNav.map((item) => {
+            const isNavHovered = hoveredNav === item;
+            const isActive = dropdown === item;
+            return (
+              <button
+                key={item}
+                onClick={() => setDropdown(dropdown === item ? null : item)}
+                onMouseEnter={() => setHoveredNav(item)}
+                onMouseLeave={() => setHoveredNav(null)}
+                style={{ cursor: "pointer", position: "relative", padding: 0, background: "none", border: "none" }}
+                className={`text-sm font-medium transition-colors ${isActive ? "text-accent" : textMuted}`}
+              >
+                {item}
+                {/* Hover/active underline */}
+                <span
+                  style={{
+                    display: "block",
+                    position: "absolute",
+                    bottom: isActive ? "-30px" : "-4px",
+                    left: 0,
+                    height: isActive ? "3px" : "1.5px",
+                    width: isActive || isNavHovered ? "100%" : "0",
+                    backgroundColor: "oklch(0.55 0.2 262)",
+                    transition: "width 0.3s ease",
+                  }}
+                />
+              </button>
+            );
+          })}
         </nav>
 
         {/* Center logo */}

@@ -171,6 +171,25 @@
 }
 
 @layer components {
+  .underline-hover {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .underline-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+  .underline-hover:hover::after {
+    width: 100%;
+  }
+
   /* Damen-style blocky logo wordmark */
   .damen-logo {
     font-family: var(--font-heading);

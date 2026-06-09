@@ -10,6 +10,7 @@ import craneOperations from "@/assets/craneoperationspic.jpg";
 import ahOperations from "@/assets/ahoperationspic.png";
 import santaFe from "@/assets/santafe.jpeg";
 import modu from "@/assets/modu.jpg";
+import tankTransport from "@/assets/tanktransport.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -276,6 +277,22 @@ function ProjectsPage() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-primary/80">Scope —</span> Full design of a prelaid mooring system complete with synthetic rope inserts for the MODU Jack Bates, commissioned by Hess NWS Exploration. The design encompassed mooring line configuration, component selection, anchor positioning, and load analysis to ensure safe station-keeping performance at the designated offshore location.
+                </p>
+              </div>
+            </div>
+
+            {/* Tank Transport Engineering */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={tankTransport} alt="Tank Transport Engineering – Go Enif / Labroy 256" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Tank Transport Engineering</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> Go Enif / Labroy 256
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Comprehensive engineering and tow planning for the marine transport of two 35-metre diameter fuel oil tanks from Bell Bay, Tasmania to Newcastle, NSW. The scope included sea-fastening design, structural assessment of the cargo support arrangement, tow route analysis, and preparation of the marine warranty documentation required for the operation.
                 </p>
               </div>
             </div>

@@ -8,6 +8,7 @@ import vesselOperability from "@/assets/project-dropdownpic.jpg";
 import spsCode from "@/assets/spscode.jpg";
 import craneOperations from "@/assets/craneoperationspic.jpg";
 import ahOperations from "@/assets/ahoperationspic.png";
+import santaFe from "@/assets/santafe.jpeg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -244,9 +245,24 @@ function ProjectsPage() {
             BRL's offshore engineering team delivers specialist analysis and design support across a broad range of marine and offshore projects, drawing on deep technical expertise in dynamic systems, mooring, and offshore operations.
           </p>
 
-          {/* Project cards — to be added */}
           <div className="space-y-5">
-            <p className="text-sm text-muted-foreground italic">Projects coming soon.</p>
+
+            {/* Jack Up Site Specific Assessment */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={santaFe} alt="Jack Up Site Specific Assessment – Santa Fe" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Jack Up Site Specific Assessment</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> Santa Fe
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Site specific assessment carried out in accordance with SNAME T&R 5-5A guidelines, covering preload capacity, bearing failure, sliding, and overturning checks for the proposed jack-up location. The assessment was prepared and submitted to Bureau Veritas for review and approval, ensuring the unit's fitness for purpose at the designated site.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

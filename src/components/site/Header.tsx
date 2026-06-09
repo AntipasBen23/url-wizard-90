@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Search, Menu, X, ExternalLink, LifeBuoy, ChevronRight } from "lucide-react";
 import vesselDropdownPic from "@/assets/vessel-dropdownpic.jpg";
+import projectDropdownPic from "@/assets/project-dropdownpic.jpg";
 
 const primaryNav = ["Vessels", "Projects", "Markets", "Services", "About"];
 
@@ -272,6 +273,7 @@ export function Header() {
               {/* Right column – featured card */}
               <div>
                 <div className="relative h-[260px] overflow-hidden rounded-sm bg-primary/10">
+                  <img src={projectDropdownPic} alt="Projects" className="absolute inset-0 h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20" />
                   <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
                     <p className="eyebrow text-white mb-2">Engineering excellence</p>

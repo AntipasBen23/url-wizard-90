@@ -12,6 +12,7 @@ import santaFe from "@/assets/santafe.jpeg";
 import modu from "@/assets/modu.jpg";
 import tankTransport from "@/assets/tanktransport.jpg";
 import craneBarge from "@/assets/cranebarge.png";
+import liftEngineering from "@/assets/liftengineering.jpeg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -310,6 +311,19 @@ function ProjectsPage() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-primary/80">Scope —</span> Design of barge mooring system and crane mats and fastenings, along with determination of crane operating limits and dynamic amplification factors (DAFs) for crane barge operations on the Brisbane Riverwalk replacement project. The analysis ensured safe and efficient lift operations within the defined environmental and structural constraints.
+                </p>
+              </div>
+            </div>
+
+            {/* Lift Engineering */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={liftEngineering} alt="Lift Engineering – Woodside Pluto LNG Jetty" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Lift Engineering</h4>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Lift engineering services for pre-assembled units and loading arms required for the construction of the Woodside Pluto LNG jetty. The scope covered detailed lift studies, rigging arrangements, centre of gravity calculations, and dynamic load assessments to ensure all lifts were executed safely and in compliance with applicable engineering standards.
                 </p>
               </div>
             </div>

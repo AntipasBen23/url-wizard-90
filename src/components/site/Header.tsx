@@ -196,11 +196,18 @@ export function Header() {
 
             {/* Bottom bar */}
             <div className="border-t border-gray-100 py-4 text-sm text-primary/55 flex justify-end">
-              Questions?{" "}
-              <a href="#contact" className="font-medium text-accent hover:underline" onClick={() => setDropdown(null)}>
+              Questions?&nbsp;&nbsp;
+              <a
+                href="#contact"
+                className="font-medium underline decoration-1 underline-offset-2"
+                style={{ color: "#e53e3e", transition: "color 0.2s ease" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#3b82f6")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#e53e3e")}
+                onClick={() => setDropdown(null)}
+              >
                 Contact us
-              </a>{" "}
-              and get in touch with the experts in the field.
+              </a>
+              &nbsp;&nbsp;and get in touch with the experts in the field.
             </div>
           </div>
         </div>

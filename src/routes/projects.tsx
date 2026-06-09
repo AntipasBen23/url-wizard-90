@@ -125,20 +125,21 @@ function ProjectsPage() {
               ))}
             </ul>
 
-            {/* Project cards */}
-            <div className="mt-14 space-y-6">
+            {/* Project cards grid */}
+            <div className="mt-14 grid gap-6 sm:grid-cols-2">
 
               {/* Docking Calculations */}
-              <div className="flex flex-col sm:flex-row gap-0 overflow-hidden rounded-sm bg-secondary">
-                <div className="w-full sm:w-[300px] shrink-0">
+              <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-[200px] overflow-hidden">
                   <img
                     src={dockingCalculations}
                     alt="Docking Calculations – Far Sword"
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-center px-8 py-8">
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">
+                <div className="p-6">
+                  <span className="eyebrow text-xs">Naval Architecture</span>
+                  <h4 className="mt-2 text-base font-bold uppercase tracking-widest text-primary">
                     Docking Calculations
                   </h4>
                   <p className="mt-3 text-sm text-muted-foreground">
@@ -146,11 +147,10 @@ function ProjectsPage() {
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-primary/80">Scope —</span> Comprehensive docking
-                    calculations for a commercial vessel, including structural analysis of the docking cradle,
-                    assessment of keel block arrangement and bearing pressures, and detailed design of cradle
-                    modifications to safely withstand increased operational loads. The project also encompassed
-                    the preparation of full docking plans and load distribution drawings for review and
-                    approval by the relevant classification society.
+                    calculations including structural analysis of the docking cradle, assessment of keel block
+                    arrangement and bearing pressures, and design of cradle modifications to withstand
+                    increased operational loads. Included preparation of full docking plans and load
+                    distribution drawings for classification society approval.
                   </p>
                 </div>
               </div>

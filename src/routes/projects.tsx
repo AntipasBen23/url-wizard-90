@@ -131,12 +131,12 @@ function ProjectsPage() {
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
               {/* Docking Calculations */}
-              <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-[280px] overflow-hidden">
+              <div className="group overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="h-[340px] overflow-hidden">
                   <img
                     src={dockingCalculations}
                     alt="Docking Calculations – Far Sword"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
@@ -158,12 +158,12 @@ function ProjectsPage() {
               </div>
 
               {/* Intact and Damage Stability */}
-              <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-[280px] overflow-hidden">
+              <div className="group overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="h-[340px] overflow-hidden">
                   <img
                     src={intactAndDamage}
                     alt="Intact and Damage Stability – Pacific Rapier"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
@@ -185,12 +185,12 @@ function ProjectsPage() {
               </div>
 
               {/* Vessel Operability Analysis */}
-              <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-[280px] overflow-hidden">
+              <div className="group overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="h-[340px] overflow-hidden">
                   <img
                     src={vesselOperability}
                     alt="Vessel Operability Analysis – Havila Harmony"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">

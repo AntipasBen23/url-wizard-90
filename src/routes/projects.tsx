@@ -13,6 +13,7 @@ import modu from "@/assets/modu.jpg";
 import tankTransport from "@/assets/tanktransport.jpg";
 import craneBarge from "@/assets/cranebarge.png";
 import liftEngineering from "@/assets/liftengineering.jpeg";
+import gorgon from "@/assets/Gorgon.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -324,6 +325,22 @@ function ProjectsPage() {
                 <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Lift Engineering</h4>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-primary/80">Scope —</span> Lift engineering services for pre-assembled units and loading arms required for the construction of the Woodside Pluto LNG jetty. The scope covered detailed lift studies, rigging arrangements, centre of gravity calculations, and dynamic load assessments to ensure all lifts were executed safely and in compliance with applicable engineering standards.
+                </p>
+              </div>
+            </div>
+
+            {/* Gorgon LNG Jetty Caisson Barge – Mooring */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={gorgon} alt="Gorgon LNG Jetty Caisson Barge – Mooring" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Gorgon LNG Jetty Caisson Barge – Mooring</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> Boa 33 / Pacific Wrangler
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Detailed mooring system design for the offloading of caissons from a semi-submersible barge at the Gorgon LNG jetty construction site. The work encompassed mooring line configuration, anchor positioning, load analysis under site-specific environmental conditions, and verification of the system's capacity to safely manage the offloading operation.
                 </p>
               </div>
             </div>

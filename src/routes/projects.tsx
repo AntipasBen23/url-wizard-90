@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ChevronRight } from "lucide-react";
 import dockingCalculations from "@/assets/docking-calculations.jpg";
+import intactAndDamage from "@/assets/intactanddamage.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -151,6 +152,33 @@ function ProjectsPage() {
                     arrangement and bearing pressures, and design of cradle modifications to withstand
                     increased operational loads. Included preparation of full docking plans and load
                     distribution drawings for classification society approval.
+                  </p>
+                </div>
+              </div>
+
+              {/* Intact and Damage Stability */}
+              <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-[200px] overflow-hidden">
+                  <img
+                    src={intactAndDamage}
+                    alt="Intact and Damage Stability – Pacific Rapier"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="eyebrow text-xs">Naval Architecture</span>
+                  <h4 className="mt-2 text-base font-bold uppercase tracking-widest text-primary">
+                    Intact and Damage Stability
+                  </h4>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Vessel —</span> Pacific Rapier
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Scope —</span> Preparation of a fully
+                    revised intact and damage stability book following significant vessel modifications,
+                    including the addition of a crane, mezzanine deck, and methanol tank. The revised
+                    stability assessment ensured continued compliance with applicable classification society
+                    and flag state requirements under the modified loading conditions.
                   </p>
                 </div>
               </div>

@@ -127,87 +127,53 @@ function ProjectsPage() {
               ))}
             </ul>
 
-            {/* Project cards grid */}
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Project cards */}
+            <div className="mt-14 space-y-5">
 
               {/* Docking Calculations */}
-              <div className="group overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="h-[340px] overflow-hidden">
-                  <img
-                    src={dockingCalculations}
-                    alt="Docking Calculations – Far Sword"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+              <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
+                <div className="sm:w-[340px] shrink-0 bg-white flex items-center justify-center p-4">
+                  <img src={dockingCalculations} alt="Docking Calculations – Far Sword" className="max-h-[200px] w-full object-contain" />
                 </div>
-                <div className="p-6">
-                  <span className="eyebrow text-xs">Naval Architecture</span>
-                  <h4 className="mt-2 text-base font-bold uppercase tracking-widest text-primary">
-                    Docking Calculations
-                  </h4>
+                <div className="flex flex-col justify-center px-8 py-7">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Docking Calculations</h4>
                   <p className="mt-3 text-sm text-muted-foreground">
                     <span className="font-semibold text-primary/80">Vessel —</span> Far Sword
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    <span className="font-semibold text-primary/80">Scope —</span> Comprehensive docking
-                    calculations including structural analysis of the docking cradle, assessment of keel block
-                    arrangement and bearing pressures, and design of cradle modifications to withstand
-                    increased operational loads. Included preparation of full docking plans and load
-                    distribution drawings for classification society approval.
+                    <span className="font-semibold text-primary/80">Scope —</span> Comprehensive docking calculations including structural analysis of the docking cradle, assessment of keel block arrangement and bearing pressures, and design of cradle modifications to withstand increased operational loads. Included preparation of full docking plans and load distribution drawings for classification society approval.
                   </p>
                 </div>
               </div>
 
               {/* Intact and Damage Stability */}
-              <div className="group overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="h-[340px] overflow-hidden">
-                  <img
-                    src={intactAndDamage}
-                    alt="Intact and Damage Stability – Pacific Rapier"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+              <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
+                <div className="sm:w-[340px] shrink-0 bg-white flex items-center justify-center p-4">
+                  <img src={intactAndDamage} alt="Intact and Damage Stability – Pacific Rapier" className="max-h-[200px] w-full object-contain" />
                 </div>
-                <div className="p-6">
-                  <span className="eyebrow text-xs">Naval Architecture</span>
-                  <h4 className="mt-2 text-base font-bold uppercase tracking-widest text-primary">
-                    Intact and Damage Stability
-                  </h4>
+                <div className="flex flex-col justify-center px-8 py-7">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Intact and Damage Stability</h4>
                   <p className="mt-3 text-sm text-muted-foreground">
                     <span className="font-semibold text-primary/80">Vessel —</span> Pacific Rapier
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    <span className="font-semibold text-primary/80">Scope —</span> Preparation of a fully
-                    revised intact and damage stability book following significant vessel modifications,
-                    including the addition of a crane, mezzanine deck, and methanol tank. The revised
-                    stability assessment ensured continued compliance with applicable classification society
-                    and flag state requirements under the modified loading conditions.
+                    <span className="font-semibold text-primary/80">Scope —</span> Preparation of a fully revised intact and damage stability book following significant vessel modifications, including the addition of a crane, mezzanine deck, and methanol tank. The revised stability assessment ensured continued compliance with applicable classification society and flag state requirements under the modified loading conditions.
                   </p>
                 </div>
               </div>
 
               {/* Vessel Operability Analysis */}
-              <div className="group overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="h-[340px] overflow-hidden">
-                  <img
-                    src={vesselOperability}
-                    alt="Vessel Operability Analysis – Havila Harmony"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+              <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
+                <div className="sm:w-[340px] shrink-0 bg-white flex items-center justify-center p-4">
+                  <img src={vesselOperability} alt="Vessel Operability Analysis – Havila Harmony" className="max-h-[200px] w-full object-contain" />
                 </div>
-                <div className="p-6">
-                  <span className="eyebrow text-xs">Naval Architecture</span>
-                  <h4 className="mt-2 text-base font-bold uppercase tracking-widest text-primary">
-                    Vessel Operability Analysis
-                  </h4>
+                <div className="flex flex-col justify-center px-8 py-7">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Vessel Operability Analysis</h4>
                   <p className="mt-3 text-sm text-muted-foreground">
                     <span className="font-semibold text-primary/80">Vessel —</span> Havila Harmony
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    <span className="font-semibold text-primary/80">Scope —</span> Detailed comparison of
-                    predicted vessel motions against recorded vessel motions captured during Vincent wellhead
-                    installation operations. The analysis validated the accuracy of the motion prediction
-                    model and provided key insights into vessel operability limits, response amplitude
-                    operators, and onboard location-specific acceleration levels under real offshore
-                    environmental conditions.
+                    <span className="font-semibold text-primary/80">Scope —</span> Detailed comparison of predicted vessel motions against recorded vessel motions captured during Vincent wellhead installation operations. The analysis validated the accuracy of the motion prediction model and provided key insights into vessel operability limits, response amplitude operators, and onboard location-specific acceleration levels under real offshore environmental conditions.
                   </p>
                 </div>
               </div>

@@ -14,6 +14,7 @@ import tankTransport from "@/assets/tanktransport.jpg";
 import craneBarge from "@/assets/cranebarge.png";
 import liftEngineering from "@/assets/liftengineering.jpeg";
 import gorgon from "@/assets/Gorgon.jpg";
+import towed from "@/assets/towed.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -341,6 +342,22 @@ function ProjectsPage() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-primary/80">Scope —</span> Detailed mooring system design for the offloading of caissons from a semi-submersible barge at the Gorgon LNG jetty construction site. The work encompassed mooring line configuration, anchor positioning, load analysis under site-specific environmental conditions, and verification of the system's capacity to safely manage the offloading operation.
+                </p>
+              </div>
+            </div>
+
+            {/* Towed Body Simulation */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={towed} alt="Towed Body Simulation – Fugro Equator" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Towed Body Simulation</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> Fugro Equator
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Tow cable load analysis covering geometry and dynamic behaviour when towing a towfish sensor on up to 9.5 km of fibre optic umbilical. The simulation assessed cable tensions, catenary shape, and dynamic response under varying vessel speeds and sea states to ensure safe and reliable sensor deployment throughout the survey operation.
                 </p>
               </div>
             </div>

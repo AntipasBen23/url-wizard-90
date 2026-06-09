@@ -239,7 +239,7 @@ export function Header() {
                   <ChevronRight className="h-5 w-5 shrink-0" />
                 </a>
                 <div className="mt-6">
-                  <p className="eyebrow mb-4">Experience & Projects</p>
+                  <p className="eyebrow mb-4">Completed Projects</p>
                   <ul className="border-l-[3px] border-accent pl-4 space-y-3">
                     {projectCategories.map((cat) => {
                       const isHovered = hoveredProject === cat;

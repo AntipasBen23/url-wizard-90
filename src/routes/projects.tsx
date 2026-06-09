@@ -6,6 +6,7 @@ import dockingCalculations from "@/assets/docking-calculations.jpg";
 import intactAndDamage from "@/assets/intactanddamage.jpg";
 import vesselOperability from "@/assets/project-dropdownpic.jpg";
 import spsCode from "@/assets/spscode.jpg";
+import craneOperations from "@/assets/craneoperationspic.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -191,6 +192,22 @@ function ProjectsPage() {
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-primary/80">Scope —</span> Probabilistic damage stability analysis conducted in full accordance with SPS Code requirements, including assessment of all applicable damage cases and verification of compliance with survivability criteria. The analysis was submitted to and approved by DNV, ensuring the vessel met the necessary classification society standards for continued operation under the SPS framework.
+                  </p>
+                </div>
+              </div>
+
+              {/* Assessment of Stability with Crane Operations */}
+              <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
+                <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                  <img src={craneOperations} alt="Assessment of Stability with Crane Operations – Nor Australis" className="max-h-[200px] w-full object-contain" />
+                </div>
+                <div className="flex flex-col justify-center px-8 py-7">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Assessment of Stability with Crane Operations</h4>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Vessel —</span> Nor Australis
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Scope —</span> Comprehensive review of existing vessel stability documentation with specific focus on crane operations, including assessment of free-surface effects, load distribution, and allowable lift envelopes. The project delivered updated recommendations for safe crane operations and vessel loading conditions to ensure continued compliance with applicable stability requirements.
                   </p>
                 </div>
               </div>

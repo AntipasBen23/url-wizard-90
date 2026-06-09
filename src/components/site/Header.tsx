@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Search, Menu, X, ExternalLink, LifeBuoy, ChevronRight } from "lucide-react";
 import vesselDropdownPic from "@/assets/vessel-dropdownpic.jpg";
 
-const primaryNav = ["Vessels", "Equipment", "Markets", "Services", "About"];
+const primaryNav = ["Vessels", "Projects", "Markets", "Services", "About"];
 
 const vesselCategories = [
   "Cargo/Commercial",

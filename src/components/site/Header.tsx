@@ -5,11 +5,10 @@ import vesselDropdownPic from "@/assets/vessel-dropdownpic.jpg";
 const primaryNav = ["Vessels", "Equipment", "Markets", "Services", "About"];
 
 const vesselCategories = [
-  "Tugs",
-  "Workboats",
-  "Pilot & Tender Vessels",
-  "Ferries",
-  "Dredgers",
+  "Cargo/Commercial",
+  "Defence and Patrol",
+  "Fishing",
+  "Research",
 ];
 
 export function Header() {

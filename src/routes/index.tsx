@@ -3,7 +3,7 @@ import { ArrowRight, Play, Volume2, ChevronRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
-import heroOcean from "@/assets/hero-ocean.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import cardVessels from "@/assets/card-vessels.jpg";
 import cardServices from "@/assets/card-services.jpg";
 import cardShiprepair from "@/assets/card-shiprepair.jpg";
@@ -87,11 +87,12 @@ function Index() {
 
       {/* Hero */}
       <section className="relative flex h-[100svh] min-h-[640px] items-center overflow-hidden">
-        <img
-          src={heroOcean}
-          alt="Ocean horizon at golden hour with offshore wind turbines"
-          width={1920}
-          height={1080}
+        <video
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-black/30" />

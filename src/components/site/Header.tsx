@@ -13,9 +13,9 @@ const vesselCategories = [
 ];
 
 const projectCategories = [
-  "Naval Architectures",
-  "Offshore Projects",
-  "Structural Design & Analysis",
+  { label: "Naval Architectures", href: "/projects#naval-architectural-projects" },
+  { label: "Offshore Projects", href: "/projects" },
+  { label: "Structural Design & Analysis", href: "/projects" },
 ];
 
 export function Header() {
@@ -242,14 +242,15 @@ export function Header() {
                   <p className="eyebrow mb-4">Completed Projects</p>
                   <ul className="border-l-[3px] border-accent pl-4 space-y-3">
                     {projectCategories.map((cat) => {
-                      const isHovered = hoveredProject === cat;
+                      const isHovered = hoveredProject === cat.label;
                       return (
-                        <li key={cat}>
+                        <li key={cat.label}>
                           <a
-                            href="#"
+                            href={cat.href}
                             style={{ cursor: "pointer", display: "block", textDecoration: "none" }}
-                            onMouseEnter={() => setHoveredProject(cat)}
+                            onMouseEnter={() => setHoveredProject(cat.label)}
                             onMouseLeave={() => setHoveredProject(null)}
+                            onClick={() => setDropdown(null)}
                           >
                             <span
                               style={{
@@ -260,7 +261,7 @@ export function Header() {
                                 transition: "color 0.2s ease, opacity 0.2s ease",
                               }}
                             >
-                              {cat}
+                              {cat.label}
                             </span>
                           </a>
                         </li>

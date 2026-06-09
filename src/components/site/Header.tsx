@@ -93,11 +93,23 @@ export function Header() {
 
         {/* Right cluster */}
         <div className="ml-auto hidden items-center gap-6 lg:flex">
-          <a href="#news" className={`text-sm font-medium transition-colors ${textMuted}`}>
+          <a
+            href="#news"
+            className={`relative text-sm font-medium transition-colors ${textMuted}`}
+            onMouseEnter={() => setHoveredNav("news")}
+            onMouseLeave={() => setHoveredNav(null)}
+          >
             News &amp; Insights
+            <span style={{ display: "block", position: "absolute", bottom: "-4px", left: 0, height: "1px", width: hoveredNav === "news" ? "100%" : "0", backgroundColor: "white", transition: "width 0.3s ease" }} />
           </a>
-          <a href="#" className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${textMuted}`}>
+          <a
+            href="#"
+            className={`relative inline-flex items-center gap-1 text-sm font-medium transition-colors ${textMuted}`}
+            onMouseEnter={() => setHoveredNav("career")}
+            onMouseLeave={() => setHoveredNav(null)}
+          >
             Career <ExternalLink className="h-3.5 w-3.5" />
+            <span style={{ display: "block", position: "absolute", bottom: "-4px", left: 0, height: "1px", width: hoveredNav === "career" ? "100%" : "0", backgroundColor: "white", transition: "width 0.3s ease" }} />
           </a>
           <button aria-label="Search" className={`transition-colors ${textMuted}`}>
             <Search className="h-5 w-5" />

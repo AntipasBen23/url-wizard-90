@@ -383,6 +383,22 @@ function ProjectsPage() {
         </div>
       </section>
 
+      {/* Structural Design & Analysis */}
+      <section id="structural-design-analysis" className="py-20 bg-background">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <h2 className="text-3xl font-bold text-primary sm:text-4xl mb-4">
+            Structural Design &amp; Analysis
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground mb-14 max-w-2xl">
+            BRL delivers rigorous structural design and analysis services across marine, offshore, and industrial sectors, applying advanced finite element methods and engineering judgement to assess, design, and verify structural systems.
+          </p>
+
+          <div className="space-y-5">
+            <p className="text-sm text-muted-foreground italic">Projects coming soon.</p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

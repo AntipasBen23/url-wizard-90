@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { ChevronRight } from "lucide-react";
+import dockingCalculations from "@/assets/docking-calculations.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -82,7 +83,7 @@ function ProjectsPage() {
       </div>
 
       {/* Naval Architectural Projects */}
-      <section className="py-20 bg-background">
+      <section id="naval-architectural-projects" className="py-20 bg-background">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
           <h2 className="text-3xl font-bold text-primary sm:text-4xl mb-10">
             Naval Architectural Projects
@@ -123,6 +124,38 @@ function ProjectsPage() {
                 </li>
               ))}
             </ul>
+
+            {/* Project cards */}
+            <div className="mt-14 space-y-6">
+
+              {/* Docking Calculations */}
+              <div className="flex flex-col sm:flex-row gap-0 overflow-hidden rounded-sm bg-secondary">
+                <div className="w-full sm:w-[300px] shrink-0">
+                  <img
+                    src={dockingCalculations}
+                    alt="Docking Calculations – Far Sword"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col justify-center px-8 py-8">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">
+                    Docking Calculations
+                  </h4>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Vessel —</span> Far Sword
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Scope —</span> Comprehensive docking
+                    calculations for a commercial vessel, including structural analysis of the docking cradle,
+                    assessment of keel block arrangement and bearing pressures, and detailed design of cradle
+                    modifications to safely withstand increased operational loads. The project also encompassed
+                    the preparation of full docking plans and load distribution drawings for review and
+                    approval by the relevant classification society.
+                  </p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>

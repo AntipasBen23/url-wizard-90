@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Search, Menu, X, ExternalLink, LifeBuoy, ChevronRight } from "lucide-react";
 import vesselDropdownPic from "@/assets/vessel-dropdownpic.jpg";
 import projectDropdownPic from "@/assets/project-dropdownpic.jpg";
+import aboutDropdownPic from "@/assets/card-story.jpg";
 
 const primaryNav = ["Vessels", "Projects", "Markets", "Services", "About"];
 
@@ -10,6 +11,12 @@ const vesselCategories = [
   "Defence and Patrol",
   "Fishing",
   "Research",
+];
+
+const aboutCategories = [
+  { label: "Mission & Vision", href: "#" },
+  { label: "Team", href: "#" },
+  { label: "Policies", href: "#" },
 ];
 
 const projectCategories = [
@@ -24,6 +31,7 @@ export function Header() {
   const [dropdown, setDropdown] = useState<string | null>(null);
   const [hoveredCat, setHoveredCat] = useState<string | null>(null);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const [hoveredAbout, setHoveredAbout] = useState<string | null>(null);
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
 
@@ -281,6 +289,89 @@ export function Header() {
                     <h3 className="text-2xl font-bold">Our Projects</h3>
                     <a href="/projects" onClick={() => setDropdown(null)} className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
                       More information <ChevronRight className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Bottom bar */}
+            <div className="border-t border-gray-100 py-4 text-sm text-primary/55 flex justify-end">
+              Questions?&nbsp;&nbsp;
+              <a
+                href="#contact"
+                className="font-medium underline decoration-1 underline-offset-2"
+                style={{ color: "#e53e3e", transition: "color 0.2s ease" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#3b82f6")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#e53e3e")}
+                onClick={() => setDropdown(null)}
+              >
+                Contact us
+              </a>
+              &nbsp;&nbsp;and get in touch with the experts in the field.
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── About mega-menu ── */}
+      {dropdown === "About" && (
+        <div className="animate-slide-down overflow-hidden border-t border-gray-100 bg-white shadow-xl">
+          <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+            <div className="grid grid-cols-[280px_1fr] py-8 gap-10">
+
+              {/* Left column */}
+              <div className="border-r border-gray-100 pr-10">
+                <a
+                  href="#"
+                  className="flex items-center justify-between text-base font-bold text-primary hover:text-accent transition-colors"
+                >
+                  About B&R Marine
+                  <ChevronRight className="h-5 w-5 shrink-0" />
+                </a>
+                <div className="mt-6">
+                  <ul className="border-l-[3px] border-accent pl-4 space-y-3">
+                    {aboutCategories.map((cat) => {
+                      const isHovered = hoveredAbout === cat.label;
+                      return (
+                        <li key={cat.label}>
+                          <a
+                            href={cat.href}
+                            style={{ cursor: "pointer", display: "block", textDecoration: "none" }}
+                            onMouseEnter={() => setHoveredAbout(cat.label)}
+                            onMouseLeave={() => setHoveredAbout(null)}
+                            onClick={() => setDropdown(null)}
+                          >
+                            <span
+                              style={{
+                                display: "block",
+                                fontSize: "0.875rem",
+                                opacity: isHovered ? 1 : 0.65,
+                                color: isHovered ? "oklch(0.55 0.2 262)" : "inherit",
+                                transition: "color 0.2s ease, opacity 0.2s ease",
+                              }}
+                            >
+                              {cat.label}
+                            </span>
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Right column – featured card */}
+              <div>
+                <div className="relative h-[260px] overflow-hidden rounded-sm bg-primary/10">
+                  <img src={aboutDropdownPic} alt="About B&R Marine" className="absolute inset-0 h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
+                    <p className="eyebrow text-white mb-2">Who we are</p>
+                    <h3 className="text-2xl font-bold">Our Story</h3>
+                    <a href="#" onClick={() => setDropdown(null)} className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
+                      Learn more <ChevronRight className="h-4 w-4" />
                     </a>
                   </div>
                 </div>

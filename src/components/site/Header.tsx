@@ -195,7 +195,7 @@ export function Header() {
             </div>
 
             {/* Bottom bar */}
-            <div className="border-t border-gray-100 py-4 text-sm text-primary/55">
+            <div className="border-t border-gray-100 py-4 text-sm text-primary/55 flex justify-end">
               Questions?{" "}
               <a href="#contact" className="font-medium text-accent hover:underline" onClick={() => setDropdown(null)}>
                 Contact us

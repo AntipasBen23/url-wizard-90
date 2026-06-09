@@ -9,6 +9,7 @@ import spsCode from "@/assets/spscode.jpg";
 import craneOperations from "@/assets/craneoperationspic.jpg";
 import ahOperations from "@/assets/ahoperationspic.png";
 import santaFe from "@/assets/santafe.jpeg";
+import modu from "@/assets/modu.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -259,6 +260,22 @@ function ProjectsPage() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-primary/80">Scope —</span> Site specific assessment carried out in accordance with SNAME T&R 5-5A guidelines, covering preload capacity, bearing failure, sliding, and overturning checks for the proposed jack-up location. The assessment was prepared and submitted to Bureau Veritas for review and approval, ensuring the unit's fitness for purpose at the designated site.
+                </p>
+              </div>
+            </div>
+
+            {/* MODU Prelaid Mooring Design */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={modu} alt="MODU Prelaid Mooring Design – Jack Bates" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">MODU Prelaid Mooring Design</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> Jack Bates
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Full design of a prelaid mooring system complete with synthetic rope inserts for the MODU Jack Bates, commissioned by Hess NWS Exploration. The design encompassed mooring line configuration, component selection, anchor positioning, and load analysis to ensure safe station-keeping performance at the designated offshore location.
                 </p>
               </div>
             </div>

@@ -11,6 +11,7 @@ import ahOperations from "@/assets/ahoperationspic.png";
 import santaFe from "@/assets/santafe.jpeg";
 import modu from "@/assets/modu.jpg";
 import tankTransport from "@/assets/tanktransport.jpg";
+import craneBarge from "@/assets/cranebarge.png";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -293,6 +294,22 @@ function ProjectsPage() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-primary/80">Scope —</span> Comprehensive engineering and tow planning for the marine transport of two 35-metre diameter fuel oil tanks from Bell Bay, Tasmania to Newcastle, NSW. The scope included sea-fastening design, structural assessment of the cargo support arrangement, tow route analysis, and preparation of the marine warranty documentation required for the operation.
+                </p>
+              </div>
+            </div>
+
+            {/* Crane Barge Analysis */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={craneBarge} alt="Crane Barge Analysis – AMS Gladstone" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Crane Barge Analysis</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> AMS Gladstone
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Design of barge mooring system and crane mats and fastenings, along with determination of crane operating limits and dynamic amplification factors (DAFs) for crane barge operations on the Brisbane Riverwalk replacement project. The analysis ensured safe and efficient lift operations within the defined environmental and structural constraints.
                 </p>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import dockingCalculations from "@/assets/docking-calculations.jpg";
 import intactAndDamage from "@/assets/intactanddamage.jpg";
 import vesselOperability from "@/assets/project-dropdownpic.jpg";
+import spsCode from "@/assets/spscode.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -174,6 +175,22 @@ function ProjectsPage() {
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-primary/80">Scope —</span> Detailed comparison of predicted vessel motions against recorded vessel motions captured during Vincent wellhead installation operations. The analysis validated the accuracy of the motion prediction model and provided key insights into vessel operability limits, response amplitude operators, and onboard location-specific acceleration levels under real offshore environmental conditions.
+                  </p>
+                </div>
+              </div>
+
+              {/* SPS Code Damage Stability Analysis */}
+              <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
+                <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                  <img src={spsCode} alt="SPS Code Damage Stability Analysis – CGG Symphony" className="max-h-[200px] w-full object-contain" />
+                </div>
+                <div className="flex flex-col justify-center px-8 py-7">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">SPS Code Damage Stability Analysis</h4>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Vessel —</span> CGG Symphony
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Scope —</span> Probabilistic damage stability analysis conducted in full accordance with SPS Code requirements, including assessment of all applicable damage cases and verification of compliance with survivability criteria. The analysis was submitted to and approved by DNV, ensuring the vessel met the necessary classification society standards for continued operation under the SPS framework.
                   </p>
                 </div>
               </div>

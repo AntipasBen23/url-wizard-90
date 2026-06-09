@@ -7,6 +7,7 @@ import intactAndDamage from "@/assets/intactanddamage.jpg";
 import vesselOperability from "@/assets/project-dropdownpic.jpg";
 import spsCode from "@/assets/spscode.jpg";
 import craneOperations from "@/assets/craneoperationspic.jpg";
+import ahOperations from "@/assets/ahoperationspic.png";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -208,6 +209,22 @@ function ProjectsPage() {
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-primary/80">Scope —</span> Comprehensive review of existing vessel stability documentation with specific focus on crane operations, including assessment of free-surface effects, load distribution, and allowable lift envelopes. The project delivered updated recommendations for safe crane operations and vessel loading conditions to ensure continued compliance with applicable stability requirements.
+                  </p>
+                </div>
+              </div>
+
+              {/* Assessment of Vessel Stability for AH Operations */}
+              <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
+                <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                  <img src={ahOperations} alt="Assessment of Vessel Stability for AH Operations – Lady Sandra" className="max-h-[200px] w-full object-contain" />
+                </div>
+                <div className="flex flex-col justify-center px-8 py-7">
+                  <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Assessment of Vessel Stability for AH Operations</h4>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Vessel —</span> Lady Sandra
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Scope —</span> Stability assessment carried out for six anchor handling tug (AHT) vessels in accordance with NMD anchor handling stability guidelines, conducted in the wake of the Bourbon Dolphin accident. The study evaluated each vessel's stability performance under anchor handling load conditions and provided recommendations to ensure full compliance with the updated regulatory requirements.
                   </p>
                 </div>
               </div>

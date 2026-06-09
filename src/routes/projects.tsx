@@ -43,7 +43,7 @@ function ProjectsPage() {
       {/* Intro */}
       <section className="py-20 bg-background">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl">
             <p className="text-lg leading-relaxed text-muted-foreground">
               In addition to its vessel design services, <span className="font-semibold text-primary">B & R Marine Energy Logistics (BRL)</span> provides
               a comprehensive range of specialist engineering consulting services, with a specific focus on the marine,
@@ -89,7 +89,7 @@ function ProjectsPage() {
             Naval Architectural Projects
           </h2>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl">
             <p className="text-base leading-relaxed text-muted-foreground mb-8">
               BRL's core naval architecture and ship design consultancy services encompass expert advice
               and analysis across the following areas:

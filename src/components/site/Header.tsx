@@ -278,9 +278,9 @@ export function Header() {
                   <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
                     <p className="eyebrow text-white mb-2">Engineering excellence</p>
                     <h3 className="text-2xl font-bold">Our Projects</h3>
-                    <button className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
+                    <a href="/projects" onClick={() => setDropdown(null)} className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
                       More information <ChevronRight className="h-4 w-4" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

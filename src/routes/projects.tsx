@@ -132,7 +132,7 @@ function ProjectsPage() {
 
               {/* Docking Calculations */}
               <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
-                <div className="sm:w-[340px] shrink-0 bg-white flex items-center justify-center p-4">
+                <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
                   <img src={dockingCalculations} alt="Docking Calculations – Far Sword" className="max-h-[200px] w-full object-contain" />
                 </div>
                 <div className="flex flex-col justify-center px-8 py-7">
@@ -148,7 +148,7 @@ function ProjectsPage() {
 
               {/* Intact and Damage Stability */}
               <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
-                <div className="sm:w-[340px] shrink-0 bg-white flex items-center justify-center p-4">
+                <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
                   <img src={intactAndDamage} alt="Intact and Damage Stability – Pacific Rapier" className="max-h-[200px] w-full object-contain" />
                 </div>
                 <div className="flex flex-col justify-center px-8 py-7">
@@ -164,7 +164,7 @@ function ProjectsPage() {
 
               {/* Vessel Operability Analysis */}
               <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
-                <div className="sm:w-[340px] shrink-0 bg-white flex items-center justify-center p-4">
+                <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
                   <img src={vesselOperability} alt="Vessel Operability Analysis – Havila Harmony" className="max-h-[200px] w-full object-contain" />
                 </div>
                 <div className="flex flex-col justify-center px-8 py-7">

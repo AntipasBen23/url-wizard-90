@@ -16,6 +16,7 @@ import liftEngineering from "@/assets/liftengineering.jpeg";
 import gorgon from "@/assets/Gorgon.jpg";
 import towed from "@/assets/towed.jpg";
 import normand from "@/assets/Normand.jpg";
+import happyBuccaneer from "@/assets/HappyBucaneer.jpeg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -394,7 +395,23 @@ function ProjectsPage() {
           </p>
 
           <div className="space-y-5">
-            <p className="text-sm text-muted-foreground italic">Projects coming soon.</p>
+
+            {/* Shiploader Sea Fastening */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-secondary hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={happyBuccaneer} alt="Shiploader Sea Fastening – Happy Buccaneer" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Shiploader Sea Fastening</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> Happy Buccaneer
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Structural engineering for the sea fastening of the Abbot Point X50 shiploader during marine transport from Brisbane to Abbot Point onboard the heavy lift vessel Happy Buccaneer. The scope covered sea fastening arrangement design, structural load calculations, and preparation of engineering drawings and documentation to support safe cargo transport.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

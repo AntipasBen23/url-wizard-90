@@ -128,11 +128,11 @@ function ProjectsPage() {
             </ul>
 
             {/* Project cards grid */}
-            <div className="mt-14 grid gap-6 sm:grid-cols-2">
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
               {/* Docking Calculations */}
               <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-[200px] overflow-hidden">
+                <div className="h-[280px] overflow-hidden">
                   <img
                     src={dockingCalculations}
                     alt="Docking Calculations – Far Sword"
@@ -159,7 +159,7 @@ function ProjectsPage() {
 
               {/* Intact and Damage Stability */}
               <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-[200px] overflow-hidden">
+                <div className="h-[280px] overflow-hidden">
                   <img
                     src={intactAndDamage}
                     alt="Intact and Damage Stability – Pacific Rapier"
@@ -186,7 +186,7 @@ function ProjectsPage() {
 
               {/* Vessel Operability Analysis */}
               <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-[200px] overflow-hidden">
+                <div className="h-[280px] overflow-hidden">
                   <img
                     src={vesselOperability}
                     alt="Vessel Operability Analysis – Havila Harmony"

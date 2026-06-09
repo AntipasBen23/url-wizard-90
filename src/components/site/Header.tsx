@@ -159,15 +159,6 @@ export function Header() {
                             >
                               {cat}
                             </span>
-                            <span
-                              style={{
-                                display: "block",
-                                height: "2px",
-                                backgroundColor: "oklch(0.55 0.2 262)",
-                                width: isHovered ? "100%" : "0",
-                                transition: "width 0.3s ease",
-                              }}
-                            />
                           </a>
                         </li>
                       );

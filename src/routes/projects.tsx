@@ -234,6 +234,23 @@ function ProjectsPage() {
         </div>
       </section>
 
+      {/* Offshore Engineering Projects */}
+      <section id="offshore-engineering-projects" className="py-20 bg-secondary">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <h2 className="text-3xl font-bold text-primary sm:text-4xl mb-4">
+            Offshore Engineering Projects
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground mb-14 max-w-2xl">
+            BRL's offshore engineering team delivers specialist analysis and design support across a broad range of marine and offshore projects, drawing on deep technical expertise in dynamic systems, mooring, and offshore operations.
+          </p>
+
+          {/* Project cards — to be added */}
+          <div className="space-y-5">
+            <p className="text-sm text-muted-foreground italic">Projects coming soon.</p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

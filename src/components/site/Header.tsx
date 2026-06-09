@@ -14,7 +14,7 @@ const vesselCategories = [
 
 const projectCategories = [
   { label: "Naval Architectures", href: "/projects#naval-architectural-projects" },
-  { label: "Offshore Projects", href: "/projects" },
+  { label: "Offshore Projects", href: "/projects#offshore-engineering-projects" },
   { label: "Structural Design & Analysis", href: "/projects" },
 ];
 

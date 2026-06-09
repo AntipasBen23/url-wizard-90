@@ -15,6 +15,7 @@ import craneBarge from "@/assets/cranebarge.png";
 import liftEngineering from "@/assets/liftengineering.jpeg";
 import gorgon from "@/assets/Gorgon.jpg";
 import towed from "@/assets/towed.jpg";
+import normand from "@/assets/Normand.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -358,6 +359,22 @@ function ProjectsPage() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-primary/80">Scope —</span> Tow cable load analysis covering geometry and dynamic behaviour when towing a towfish sensor on up to 9.5 km of fibre optic umbilical. The simulation assessed cable tensions, catenary shape, and dynamic response under varying vessel speeds and sea states to ensure safe and reliable sensor deployment throughout the survey operation.
+                </p>
+              </div>
+            </div>
+
+            {/* Vessel Mobilisation */}
+            <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
+              <div className="sm:w-[340px] shrink-0 flex items-center justify-center p-4">
+                <img src={normand} alt="Vessel Mobilisation – Normand Clough" className="max-h-[200px] w-full object-contain" />
+              </div>
+              <div className="flex flex-col justify-center px-8 py-7">
+                <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Vessel Mobilisation</h4>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Vessel —</span> Normand Clough
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-semibold text-primary/80">Scope —</span> Sea fastening design for the mobilisation of a field abandonment spread onto the Normand Clough vessel in support of the Lufeng 22-1 field abandonment project. The scope included structural assessment of deck loadings, fastening arrangement design, and preparation of the relevant engineering documentation to support safe offshore mobilisation.
                 </p>
               </div>
             </div>

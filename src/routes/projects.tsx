@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import { ChevronRight } from "lucide-react";
 import dockingCalculations from "@/assets/docking-calculations.jpg";
 import intactAndDamage from "@/assets/intactanddamage.jpg";
+import vesselOperability from "@/assets/project-dropdownpic.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -179,6 +180,34 @@ function ProjectsPage() {
                     including the addition of a crane, mezzanine deck, and methanol tank. The revised
                     stability assessment ensured continued compliance with applicable classification society
                     and flag state requirements under the modified loading conditions.
+                  </p>
+                </div>
+              </div>
+
+              {/* Vessel Operability Analysis */}
+              <div className="overflow-hidden rounded-sm border border-border bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-[200px] overflow-hidden">
+                  <img
+                    src={vesselOperability}
+                    alt="Vessel Operability Analysis – Havila Harmony"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="eyebrow text-xs">Naval Architecture</span>
+                  <h4 className="mt-2 text-base font-bold uppercase tracking-widest text-primary">
+                    Vessel Operability Analysis
+                  </h4>
+                  <p className="mt-3 text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Vessel —</span> Havila Harmony
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-primary/80">Scope —</span> Detailed comparison of
+                    predicted vessel motions against recorded vessel motions captured during Vincent wellhead
+                    installation operations. The analysis validated the accuracy of the motion prediction
+                    model and provided key insights into vessel operability limits, response amplitude
+                    operators, and onboard location-specific acceleration levels under real offshore
+                    environmental conditions.
                   </p>
                 </div>
               </div>

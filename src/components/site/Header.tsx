@@ -181,9 +181,9 @@ export function Header() {
               <div>
                 <div className="relative h-[260px] overflow-hidden rounded-sm bg-primary/10">
                   <img src={vesselDropdownPic} alt="Vessels" className="absolute inset-0 h-full w-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20" />
                   <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
-                    <p className="eyebrow text-accent mb-2">Proven design, short term delivery</p>
+                    <p className="eyebrow text-white mb-2">Proven design, short term delivery</p>
                     <h3 className="text-2xl font-bold">Vessels in stock</h3>
                     <button className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
                       More information <ChevronRight className="h-4 w-4" />

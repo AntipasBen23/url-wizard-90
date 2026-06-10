@@ -3,7 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import ceoIsrael from "@/assets/CEO Isreal.jpeg";
 import giftIsrael from "@/assets/gift isreal.jpeg";
-import josephGazz from "@/assets/Joseph Gazz.jpeg";
+import josephGazz from "@/assets/joe gazz1.jpeg";
 import sundayKennedy from "@/assets/sunday kennedy.jpeg";
 import ngobiChristopher from "@/assets/ngobi christopher.png";
 

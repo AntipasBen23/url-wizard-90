@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import ceoIsrael from "@/assets/CEO Isreal.jpeg";
 import giftIsrael from "@/assets/gift isreal.jpeg";
+import josephGazz from "@/assets/Joseph Gazz.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -34,6 +35,14 @@ const teamMembers = [
     qualifications: "CBE, HW, FDP",
     country: "Nigeria",
     flag: "🇳🇬",
+  },
+  {
+    img: josephGazz,
+    title: "Africa Regional Supervisor",
+    name: "Joseph Richard Gazzier",
+    qualifications: "PIF, CAPT",
+    country: "Alabama, USA",
+    flag: "🇺🇸",
   },
 ];
 

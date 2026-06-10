@@ -192,7 +192,7 @@ function AboutPage() {
             {teamMembers.map((member) => (
               <div
                 key={member.name}
-                className="group w-[200px] overflow-hidden rounded-sm bg-white shadow-md hover:shadow-xl transition-shadow duration-300"
+                className="group w-[200px] flex flex-col overflow-hidden rounded-sm bg-white shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Photo */}
                 <div className="relative h-[240px] w-full overflow-hidden bg-gray-100">
@@ -204,7 +204,7 @@ function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
                 </div>
                 {/* Info */}
-                <div className="border-l-4 border-accent px-4 py-4">
+                <div className="flex-1 border-l-4 border-accent px-4 py-4">
                   <p className="text-[11px] font-medium uppercase tracking-widest text-accent">{member.title}</p>
                   <p className="mt-1 text-sm font-bold text-primary">{member.name}</p>
                   <p className="mt-0.5 text-[11px] text-muted-foreground/80 italic">({member.qualifications})</p>

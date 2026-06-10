@@ -21,15 +21,17 @@ export const Route = createFileRoute("/about")({
 const teamMembers = [
   {
     img: ceoIsrael,
-    title: "Chairman and CEO",
-    name: "Israel Benjamin",
+    title: "Chairman, CEO",
+    name: "Israel B. Edu",
+    qualifications: "Navy Capt. RTD, BS, MST, MSC",
     country: "Nigeria",
     flag: "🇳🇬",
   },
   {
     img: giftIsrael,
-    title: "Finance Director",
-    name: "Gift Israel Benjamin",
+    title: "Finance Director, Economist",
+    name: "Gift I. Benjamin",
+    qualifications: "CBE, HW, FDP",
     country: "Nigeria",
     flag: "🇳🇬",
   },
@@ -142,6 +144,7 @@ function AboutPage() {
                 <div className="border-l-4 border-accent px-4 py-4">
                   <p className="text-[11px] font-medium uppercase tracking-widest text-accent">{member.title}</p>
                   <p className="mt-1 text-sm font-bold text-primary">{member.name}</p>
+                  <p className="mt-0.5 text-[11px] text-muted-foreground/80 italic">({member.qualifications})</p>
                   <p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                     <span>{member.flag}</span>
                     {member.country}

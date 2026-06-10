@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import ceoIsrael from "@/assets/CEO Isreal.jpeg";
 import giftIsrael from "@/assets/gift isreal.jpeg";
 import josephGazz from "@/assets/Joseph Gazz.jpeg";
+import sundayKennedy from "@/assets/sunday kennedy.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -43,6 +44,14 @@ const teamMembers = [
     qualifications: "PIF, CAPT",
     country: "Alabama, USA",
     flag: "🇺🇸",
+  },
+  {
+    img: sundayKennedy,
+    title: "Marine Construction Supervisor",
+    name: "Sunday Kennedy Kokumo",
+    qualifications: "CPT, MST",
+    country: "Nigeria",
+    flag: "🇳🇬",
   },
 ];
 

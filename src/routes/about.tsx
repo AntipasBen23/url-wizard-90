@@ -5,6 +5,7 @@ import ceoIsrael from "@/assets/CEO Isreal.jpeg";
 import giftIsrael from "@/assets/gift isreal.jpeg";
 import josephGazz from "@/assets/Joseph Gazz.jpeg";
 import sundayKennedy from "@/assets/sunday kennedy.jpeg";
+import ngobiChristopher from "@/assets/ngobi christopher.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -50,6 +51,14 @@ const teamMembers = [
     title: "Marine Construction Supervisor",
     name: "Sunday Kennedy Kokumo",
     qualifications: "CPT, MST",
+    country: "Nigeria",
+    flag: "🇳🇬",
+  },
+  {
+    img: ngobiChristopher,
+    title: "General Manager",
+    name: "Ngobi Christopher Godwin",
+    qualifications: "HND, BSC, MSTIT, M.ENG, ECE — Electrical & Electronics, Marine Technician",
     country: "Nigeria",
     flag: "🇳🇬",
   },

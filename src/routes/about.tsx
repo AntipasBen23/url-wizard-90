@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import ceoIsrael from "@/assets/CEO Isreal.jpeg";
+import giftIsrael from "@/assets/gift isreal.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -22,6 +23,13 @@ const teamMembers = [
     img: ceoIsrael,
     title: "Chairman and CEO",
     name: "Israel Benjamin",
+    country: "Nigeria",
+    flag: "🇳🇬",
+  },
+  {
+    img: giftIsrael,
+    title: "Finance Director",
+    name: "Gift Israel Benjamin",
     country: "Nigeria",
     flag: "🇳🇬",
   },

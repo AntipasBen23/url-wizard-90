@@ -119,22 +119,21 @@ function AboutPage() {
             {teamMembers.map((member) => (
               <div
                 key={member.name}
-                className="w-[220px] overflow-hidden rounded-sm bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="group w-[200px] overflow-hidden rounded-sm bg-white shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Photo */}
-                <div className="h-[240px] w-full overflow-hidden bg-gray-100">
+                <div className="relative h-[240px] w-full overflow-hidden bg-gray-100">
                   <img
                     src={member.img}
                     alt={member.name}
-                    className="h-full w-full object-cover object-top"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
                 </div>
-                {/* Accent bar */}
-                <div className="h-1 w-full bg-accent" />
                 {/* Info */}
-                <div className="px-4 py-4">
-                  <p className="text-xs italic text-muted-foreground">{member.title}</p>
-                  <p className="mt-1 text-sm font-bold uppercase tracking-wide text-primary">{member.name}</p>
+                <div className="border-l-4 border-accent px-4 py-4">
+                  <p className="text-[11px] font-medium uppercase tracking-widest text-accent">{member.title}</p>
+                  <p className="mt-1 text-sm font-bold text-primary">{member.name}</p>
                   <p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                     <span>{member.flag}</span>
                     {member.country}

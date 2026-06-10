@@ -119,22 +119,22 @@ function AboutPage() {
             {teamMembers.map((member) => (
               <div
                 key={member.name}
-                className="relative w-[220px] bg-white shadow-md overflow-hidden"
+                className="w-[220px] overflow-hidden rounded-sm bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Photo */}
-                <div className="h-[220px] w-full overflow-hidden bg-gray-100">
+                <div className="h-[240px] w-full overflow-hidden bg-gray-100">
                   <img
                     src={member.img}
                     alt={member.name}
                     className="h-full w-full object-cover object-top"
                   />
                 </div>
-                {/* Gold corner accent */}
-                <span className="absolute bottom-[72px] right-0 h-6 w-6 bg-yellow-400" />
+                {/* Accent bar */}
+                <div className="h-1 w-full bg-accent" />
                 {/* Info */}
                 <div className="px-4 py-4">
                   <p className="text-xs italic text-muted-foreground">{member.title}</p>
-                  <p className="mt-0.5 text-sm font-bold uppercase tracking-wide text-primary">{member.name}</p>
+                  <p className="mt-1 text-sm font-bold uppercase tracking-wide text-primary">{member.name}</p>
                   <p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                     <span>{member.flag}</span>
                     {member.country}

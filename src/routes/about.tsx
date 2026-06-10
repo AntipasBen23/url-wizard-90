@@ -8,6 +8,7 @@ import sundayKennedy from "@/assets/sunday kennedy.jpeg";
 import ngobiChristopher from "@/assets/ngobi christopher.png";
 import lindsay from "@/assets/lindsay.jpeg";
 import davidUdosen from "@/assets/David udosen.png";
+import awofidipe from "@/assets/awofidipe.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -77,6 +78,14 @@ const teamMembers = [
     title: "Operations Manager",
     name: "David Udosen",
     qualifications: "BSC, MST, Elec & Elec",
+    country: "Nigeria",
+    flag: "🇳🇬",
+  },
+  {
+    img: awofidipe,
+    title: "Business Development",
+    name: "Awofidipe Samuel Adedotun",
+    qualifications: "Port Capt. BSC, D.CS Nautical Science",
     country: "Nigeria",
     flag: "🇳🇬",
   },

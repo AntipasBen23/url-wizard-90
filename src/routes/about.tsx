@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import ceoIsrael from "@/assets/CEO Isreal.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -15,6 +16,16 @@ export const Route = createFileRoute("/about")({
   }),
   component: AboutPage,
 });
+
+const teamMembers = [
+  {
+    img: ceoIsrael,
+    title: "Chairman and CEO",
+    name: "Israel Benjamin",
+    country: "Nigeria",
+    flag: "🇳🇬",
+  },
+];
 
 const guidingPrinciples = [
   "A determination to achieve high personal standards",
@@ -104,9 +115,34 @@ function AboutPage() {
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
           <p className="eyebrow mb-4">Our People</p>
           <h2 className="text-4xl font-bold text-primary sm:text-5xl">The Team</h2>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Content coming soon — meet the professionals behind B &amp; R Marine Energy Logistics.
-          </p>
+          <div className="mt-12 flex flex-wrap gap-8">
+            {teamMembers.map((member) => (
+              <div
+                key={member.name}
+                className="relative w-[220px] bg-white shadow-md overflow-hidden"
+              >
+                {/* Photo */}
+                <div className="h-[220px] w-full overflow-hidden bg-gray-100">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-full w-full object-cover object-top"
+                  />
+                </div>
+                {/* Gold corner accent */}
+                <span className="absolute bottom-[72px] right-0 h-6 w-6 bg-yellow-400" />
+                {/* Info */}
+                <div className="px-4 py-4">
+                  <p className="text-xs italic text-muted-foreground">{member.title}</p>
+                  <p className="mt-0.5 text-sm font-bold uppercase tracking-wide text-primary">{member.name}</p>
+                  <p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <span>{member.flag}</span>
+                    {member.country}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

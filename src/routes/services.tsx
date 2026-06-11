@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import drillingImg from "@/assets/drillingimg.png";
+import shipManagementImg from "@/assets/ship management.jpeg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -70,6 +71,81 @@ function ServicesPage() {
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Ship Management ── */}
+      <section id="ship-management" className="py-24 bg-secondary">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={shipManagementImg}
+                alt="Ship Management"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 02</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Ship Management</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics is the world's leading independent ship management company, and a
+                global pioneer in technology, innovation, and services for worldwide vessel owners. With over 25 years'
+                experience in managing vessels in the shipping, cruise and energy sectors, B &amp; R Marine Energy
+                Logistics is committed to delivering safe and compliant operations through transparency,
+                pro-activeness, and strong partnerships.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics provides a full range of ship management and marine support services
+                to ship owners and operators around the globe, as well as the ability to blend those services together
+                in unique combinations to meet specific customer needs. With responsibility for 100 assets including
+                tankers, bulk carriers, and gas carriers, to cruise, offshore, passenger vessels and containerships,
+                B &amp; R Marine Energy Logistics has access to an international network of over 1,000 seafarers
+                across all sectors. They are supported by an onshore team of over 500 colleagues spread throughout
+                30 countries in 50 regional offices.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                As industry leaders, we combine our global footprint with specialists and operational hubs around the
+                world to give our customers the most comprehensive service with multi-disciplined support. Guided by
+                our values, we aim to deliver flawless service in every area in which we operate, with safety being
+                our number one priority. B &amp; R Marine Energy Logistics has always placed technology and innovation
+                at the center of its operations.
+              </p>
+
+              {/* Sub-sections */}
+              <div className="mt-10 space-y-8">
+                {[
+                  {
+                    title: "Shipberyl",
+                    body: "A vital tool in delivering flawless service — a powerful digital platform that helps us collaborate better, make data-driven decisions, and seamlessly connect different areas of the business.",
+                  },
+                  {
+                    title: "Operating Model",
+                    body: "By leveraging our unique operating model, we align our risks and priorities more closely with our customers. We not only provide ship management services, but certainty and confidence for owners wanting to stay one step ahead.",
+                  },
+                  {
+                    title: "Safety",
+                    body: "We are able to set, measure and deliver the industry leading standards for safety, compliance, environmental protection and service quality. We demonstrate the know-how, commitment, and drive to help all our customers achieve their goals, through cost-effective, safe, and performance-enhancing asset management — wherever and whenever it's needed.",
+                  },
+                  {
+                    title: "Technology",
+                    body: "This drives better outcomes for our customers, integrating technology and data in order to generate tangible value in all aspects of their operations. Technology and datasets provide actionable insights, driving vessel safety, environmentally compliant operations and ultimately optimising technical and commercial performance.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="border-l-4 border-accent pl-5">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-primary">{item.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>

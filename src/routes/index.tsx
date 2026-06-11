@@ -5,6 +5,18 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
 import heroVideo from "@/assets/hero-video.mp4";
+import client1 from "@/assets/client1.png";
+import client2 from "@/assets/client2.png";
+import client3 from "@/assets/client3.png";
+import client4 from "@/assets/client4.png";
+import client5 from "@/assets/client5.png";
+import client6 from "@/assets/client6.png";
+import client7 from "@/assets/client7.png";
+import client8 from "@/assets/client8.png";
+import client9 from "@/assets/client9.png";
+import client10 from "@/assets/client10.png";
+import client11 from "@/assets/client11.png";
+import client12 from "@/assets/client12.png";
 import cardVessels from "@/assets/card-vessels.jpg";
 import cardServices from "@/assets/card-services.jpg";
 import cardShiprepair from "@/assets/card-shiprepair.jpg";
@@ -74,12 +86,6 @@ const news = [
   },
 ];
 
-const events = [
-  { day: "4", mon: "Jun", title: "Posidonia 2026", loc: "Athens, Greece" },
-  { day: "9", mon: "Jun", title: "IHMA Congress", loc: "Rotterdam, The Netherlands" },
-  { day: "9", mon: "Jun", title: "Seawork", loc: "Southampton, United Kingdom" },
-  { day: "16", mon: "Jun", title: "Breakbulk Europe", loc: "Rotterdam, The Netherlands" },
-];
 
 const offices = [
   {
@@ -566,28 +572,28 @@ function Index() {
         </div>
       </section>
 
-      {/* Events */}
+      {/* Our Clients */}
       <section className="bg-secondary py-24">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-          <div className="flex items-end justify-between">
-            <h2 className="text-4xl font-bold text-primary sm:text-5xl">Upcoming events</h2>
-            <a href="#" className="hidden items-center gap-2 text-sm font-semibold text-accent hover:underline sm:inline-flex">
-              See all <ArrowRight className="h-4 w-4" />
-            </a>
+          <div className="text-center mb-12">
+            <p className="eyebrow mb-3">Trusted Partners</p>
+            <h2 className="text-4xl font-bold text-primary sm:text-5xl">Our Clients</h2>
+            <div className="mx-auto mt-4 h-0.5 w-16 bg-accent" />
           </div>
-          <div className="mt-10 divide-y divide-border border-y border-border">
-            {events.map((e) => (
-              <a key={e.title} href="#" className="group flex items-center gap-6 py-6 transition-colors hover:bg-background/60">
-                <div className="flex w-16 shrink-0 flex-col items-center">
-                  <span className="text-3xl font-bold text-primary">{e.day}</span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-accent">{e.mon}</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-primary">{e.title}</h3>
-                  <p className="text-sm text-muted-foreground">{e.loc}</p>
-                </div>
-                <ArrowRight className="h-5 w-5 -translate-x-2 text-accent opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
-              </a>
+          <div className="grid grid-cols-3 gap-6 sm:grid-cols-4 lg:grid-cols-6">
+            {[client1, client2, client3, client4, client5, client6, client7, client8, client9, client10, client11, client12].map((logo, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-center rounded-sm bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
+                style={{ aspectRatio: "1 / 1" }}
+              >
+                <img
+                  src={logo}
+                  alt={`Client ${i + 1}`}
+                  className="h-full w-full object-contain"
+                  style={{ maxHeight: "80px" }}
+                />
+              </div>
             ))}
           </div>
         </div>

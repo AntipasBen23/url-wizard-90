@@ -10,6 +10,7 @@ import processControlImg from "@/assets/processcontrol.png";
 import petroImg from "@/assets/petro.png";
 import indusImg from "@/assets/indus.png";
 import vesselInspectImg from "@/assets/vesselinspect.jpeg";
+import safetyImg from "@/assets/safetyimg.jpeg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -640,6 +641,73 @@ function ServicesPage() {
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Safety Training for Seafarers ── */}
+      <section id="safety-training-seafarers" className="py-24 bg-secondary">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={safetyImg}
+                alt="Safety Training for Seafarers"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 10</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Safety Training for Seafarers</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics delivers industry-leading safety training programmes designed
+                specifically for seafarers operating across all vessel types and maritime environments. Our training
+                is developed in line with STCW conventions, IMO guidelines and flag state requirements, equipping
+                seafarers with the knowledge, skills and certifications needed to perform their duties safely and
+                confidently at sea.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                From basic safety familiarisation for new entrants to advanced survival and firefighting courses for
+                experienced mariners, our programmes are delivered by certified instructors with extensive sea-going
+                and operational backgrounds, ensuring training is practical, relevant and immediately applicable.
+              </p>
+
+              <div className="mt-10 space-y-8">
+                {[
+                  {
+                    title: "STCW Basic Safety Training",
+                    body: "Our STCW-compliant basic safety training covers Personal Survival Techniques, Fire Prevention and Firefighting, Elementary First Aid, and Personal Safety and Social Responsibilities — the four core elements required for all seafarers under international convention.",
+                  },
+                  {
+                    title: "Firefighting & Fire Prevention",
+                    body: "Advanced firefighting courses train seafarers to take charge of firefighting operations onboard, covering fire detection systems, breathing apparatus, fire suppression methods and evacuation coordination in accordance with SOLAS requirements.",
+                  },
+                  {
+                    title: "Survival at Sea & HUET",
+                    body: "Helicopter Underwater Escape Training (HUET) and sea survival courses prepare offshore and maritime personnel for emergency evacuation scenarios, including liferaft deployment, survival craft operation, and search and rescue coordination.",
+                  },
+                  {
+                    title: "Medical First Aid & Care",
+                    body: "We offer medical first aid and medical care training for designated ship's officers, covering casualty assessment, CPR, trauma management, and the administration of medicines — enabling effective emergency medical response when shore-based help is not immediately available.",
+                  },
+                  {
+                    title: "Safety Management & HSE Awareness",
+                    body: "Our HSE awareness and safety management training instils a proactive safety culture among crew, covering risk assessment, permit-to-work systems, hazard identification, incident reporting and the International Safety Management (ISM) Code requirements.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="border-l-4 border-accent pl-5">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-primary">{item.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>

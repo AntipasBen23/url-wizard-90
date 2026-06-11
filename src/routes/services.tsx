@@ -11,6 +11,7 @@ import petroImg from "@/assets/petro.png";
 import indusImg from "@/assets/indus.png";
 import vesselInspectImg from "@/assets/vesselinspect.jpeg";
 import safetyImg from "@/assets/safetyimg.jpeg";
+import electImg from "@/assets/electimg.jpeg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -708,6 +709,73 @@ function ServicesPage() {
                   </div>
                 ))}
               </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Electrical, Electronic and Telecommunication Engineering ── */}
+      <section id="electrical-electronic-engineering" className="py-24 bg-background">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 11</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Electrical, Electronic &amp; Telecommunication Engineering (ETE)</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics delivers end-to-end Electrical, Electronic and Telecommunication
+                Engineering (ETE) services to the maritime, offshore and industrial sectors. Our team of qualified
+                engineers and technicians provides reliable design, installation, commissioning, maintenance and
+                repair solutions for electrical and communication systems across vessels, platforms and onshore
+                facilities.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                From low-voltage power distribution and automation to satellite communication systems and integrated
+                bridge equipment, we ensure all electrical and electronic systems operate safely, efficiently and
+                in full compliance with class, flag state and international standards.
+              </p>
+
+              <div className="mt-10 space-y-8">
+                {[
+                  {
+                    title: "Electrical Installation & Maintenance",
+                    body: "We design, install and maintain low and medium voltage electrical systems for vessels and offshore structures, including switchboards, motor control centres, power distribution panels, lighting systems, cable management and earthing arrangements — all in compliance with IEC and class society standards.",
+                  },
+                  {
+                    title: "Electronic Systems & Navigation Equipment",
+                    body: "Our engineers service and maintain a full range of marine electronic and navigation equipment including RADAR, ECDIS, AIS, GPS, echo sounders, gyrocompasses, autopilot systems, and integrated bridge systems — ensuring vessels meet SOLAS carriage requirements at all times.",
+                  },
+                  {
+                    title: "Telecommunication Systems",
+                    body: "We install, commission and maintain vessel communication systems including GMDSS equipment, VSAT satellite communications, VHF/UHF radio systems, intercom networks, CCTV and public address systems — keeping vessels connected and compliant with international communication regulations.",
+                  },
+                  {
+                    title: "Automation & Control Systems",
+                    body: "Our ETE team provides support for vessel automation systems including engine room alarm and monitoring systems, integrated automation platforms, UPS systems, battery management and emergency power systems to ensure uninterrupted and safe vessel operations.",
+                  },
+                  {
+                    title: "Inspection, Testing & Certification",
+                    body: "We carry out comprehensive electrical inspections, insulation resistance testing, thermographic surveys and load testing on electrical installations, producing detailed reports to support class renewal surveys, statutory compliance and insurance requirements.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="border-l-4 border-accent pl-5">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-primary">{item.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={electImg}
+                alt="Electrical Electronic and Telecommunication Engineering"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
 
           </div>

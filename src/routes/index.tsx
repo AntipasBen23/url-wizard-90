@@ -36,11 +36,11 @@ export const Route = createFileRoute("/")({
 });
 
 const portfolio = [
-  { label: "Vessels", img: cardVessels, span: "lg:col-span-2 lg:row-span-2" },
-  { label: "Services", img: cardServices, span: "lg:col-span-2" },
-  { label: "Shiprepair", img: cardShiprepair, span: "" },
-  { label: "Companies", img: cardCompanies, span: "" },
-  { label: "Our Story", img: cardStory, span: "lg:col-span-2" },
+  { label: "Vessels", img: cardVessels, span: "lg:col-span-2 lg:row-span-2", href: "/vessels" },
+  { label: "Services", img: cardServices, span: "lg:col-span-2", href: "/services" },
+  { label: "Shiprepair", img: cardShiprepair, span: "", href: "/services" },
+  { label: "Companies", img: cardCompanies, span: "", href: "/about" },
+  { label: "Our Story", img: cardStory, span: "lg:col-span-2", href: "/about" },
 ];
 
 const spotlight = [
@@ -429,7 +429,7 @@ function Index() {
             {portfolio.map((card) => (
               <a
                 key={card.label}
-                href="#"
+                href={card.href}
                 className={`group relative overflow-hidden rounded-sm ${card.span}`}
               >
                 <img

@@ -5,6 +5,7 @@ import drillingImg from "@/assets/drillingimg.png";
 import shipManagementImg from "@/assets/ship management.jpeg";
 import crewmenImg from "@/assets/crewmen.png";
 import shipTechImg from "@/assets/ship tech.png";
+import torqueImg from "@/assets/torque.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -283,6 +284,115 @@ function ServicesPage() {
                   </div>
                 ))}
               </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Torqueing and Hot Bolting Services ── */}
+      <section id="torqueing-hot-bolting" className="py-24 bg-background">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 05</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Torqueing and Hot Bolting Services</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics offers the best services when it comes to bolting, training and
+                consulting — offering full bolting tool service and maintenance wherever you need it. We provide
+                personalised bolting demonstrations and training, and our service vehicle is equipped to perform
+                torque wrench and other equipment calibrations and repairs on site.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                We can give you advice on the best solutions and the bolting tools most suited to your application,
+                enabling safe and controlled performance of your bolting activities. We are presently handling
+                servicing and maintenance jobs for Exxon Mobil and other sub-contractors.
+              </p>
+
+              {/* Torqueing Training */}
+              <div className="mt-10 border-l-4 border-accent pl-5">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-primary">Torqueing and Hot Bolting Training</h3>
+              </div>
+
+              {/* Bolt and Torque Technician */}
+              <div className="mt-8 border-l-4 border-accent pl-5">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-primary">Bolt and Torque Technician</h3>
+              </div>
+              <ul className="mt-4 space-y-3">
+                {[
+                  "Performing a variety of flange joint related services, bolt torque & tensioning",
+                  "Perform bolt-up using hydraulic torque wrenches / or tensioners",
+                  "Set pump pressure and perform bolt load calculation",
+                  "Conduct repair hydraulic machine & hydraulic torque wrenches",
+                  "Responsible for torqueing and hot bolting of any kind of flanges",
+                  "Responsible for alignment of all flanges",
+                  "Analyze isometric drawing or P&ID for location and details of flange, gasket, bolts & nuts",
+                  "Preparing tools and equipment to be used in job site",
+                  "Inspection of flange face, gasket, bolts and nuts for any damage before box-up",
+                  "Numbering of bolts for sequence preparation",
+                  "Assembling torque equipment",
+                  "Setting torque machines precise pressure output",
+                  "Torque sequence for 30%, 70% and 100% and clockwise set for final torque (depends on project procedure)",
+                  "Checking all bolts using brass hammer to avoid sparks for any loose bolts",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
+                    <span className="text-base leading-relaxed text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mechanical Fitting */}
+              <div className="mt-12 border-l-4 border-accent pl-5">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-primary">Mechanical Fitting Services — Offshore &amp; Onshore</h3>
+              </div>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Mechanical/Plant Fitting is a field of mechanical engineering that deals with the maintenance of
+                machines. The key aspect is to understand the interchangeability of mechanical parts. All machine
+                parts are manufactured in such a manner that they are within the acceptable limit of tolerance
+                (limits and fits).
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                BR Marine Energy Logistics specialises in taking care of all your mechanical fittings applying a
+                cost-effective style of operations. We can help repair and re-pipe gas lines and water lines —
+                whatever you need, our Fitters can help. Pipe fittings are attached to the end of pipes that allow
+                them to change direction, control the flow, and change the diameter of the pipe.
+              </p>
+              <h4 className="mt-6 text-sm font-semibold text-primary">Types of pipe fittings and their purposes:</h4>
+              <ul className="mt-4 space-y-3">
+                {[
+                  "Elbows: Used to change the angle or direction of the pipe run — most commonly in 90° and 45° turns.",
+                  "Street Elbows: One end has male threads, the other female threads. Convenient in tight quarters.",
+                  "Tee Fittings: Shaped like the letter T. Allows for branch lines.",
+                  "Couplings: Used to join two straight pieces of pipe of the same diameter.",
+                  "Reducers: Used to join pipes of different diameters, making a gradual change in diameter.",
+                  "Bushings: Used to make the diameter of a pipe fitting smaller with an abrupt change, taking little space.",
+                  "Unions: Used where pipes cannot be turned or when equipment may need to be removed for maintenance.",
+                  "Adaptor Fittings: Used to change the end of a non-threaded pipe to male or female threads.",
+                  "Caps: Used to close the end of a dead-end pipe.",
+                  "Plugs: Used to close an ending on a pipe fitting normally used for inspection or cleanout.",
+                  "Nipples: Short lengths of pipe threaded at both ends.",
+                  "Wyes: Used primarily to gain inside access to DWV (drain-waste-vent) systems.",
+                  "Valves: Devices that control the flow of liquid or gas — including compression, ball, sleeve-cartridge and ceramic disc valves.",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
+                    <span className="text-base leading-relaxed text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={torqueImg}
+                alt="Torqueing and Hot Bolting Services"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
 
           </div>

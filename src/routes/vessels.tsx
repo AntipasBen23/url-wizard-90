@@ -6,6 +6,7 @@ import bhagwanRocker from "@/assets/bhagwan rocker vessel.jpeg";
 import alamoVessel from "@/assets/alamo vessel.jpg";
 import bhagwanShaker from "@/assets/bhagwan shaker.jpeg";
 import alBasrahVessel from "@/assets/Ai basrah vessel.jpeg";
+import tbdVessel from "@/assets/tbd vessel.jpg";
 
 export const Route = createFileRoute("/vessels")({
   head: () => ({
@@ -88,6 +89,18 @@ const defenceVessels = [
       { label: "Speed", value: "17.0 knots" },
       { label: "Deadweight", value: "550 tonnes" },
       { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: tbdVessel,
+    name: "TBD",
+    type: "35.0 metre Patrol Vessel",
+    specs: [
+      { label: "Length Overall", value: "35.8 metres" },
+      { label: "Beam", value: "7.6 metres" },
+      { label: "Installed Power", value: "4080 kW" },
+      { label: "Speed", value: "30.0 knots" },
+      { label: "BRL Scope", value: "Full Tender Package" },
     ],
   },
 ];

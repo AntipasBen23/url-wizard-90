@@ -8,6 +8,14 @@ import bhagwanShaker from "@/assets/bhagwan shaker.jpeg";
 import alBasrahVessel from "@/assets/Ai basrah vessel.jpeg";
 import tbdVessel from "@/assets/tbd vessel.jpg";
 import nemesisVessel from "@/assets/nemesis vessel.jpg";
+import rvSolanderVessel from "@/assets/rv solander vessel.jpg";
+import rvNaturalisteVessel from "@/assets/alcyone.jpg";
+import alcyoneVessel from "@/assets/apollo s.jpeg";
+import apolloSVessel from "@/assets/apollo s.jpeg";
+import discoveryIII from "@/assets/discovery iii.jpg";
+import nalenaBay from "@/assets/nalena bay.jpeg";
+import josephConrad from "@/assets/joseph conrad.jpg";
+import rvMeen from "@/assets/Rv meen.jpg";
 
 export const Route = createFileRoute("/vessels")({
   head: () => ({
@@ -118,6 +126,111 @@ const defenceVessels = [
   },
 ];
 
+const fishingResearchVessels = [
+  {
+    img: rvSolanderVessel,
+    name: "RV Solander",
+    type: "35.8 metre Research Vessel",
+    specs: [
+      { label: "Length Overall", value: "35.8 metres" },
+      { label: "Beam", value: "8.6 metres" },
+      { label: "Installed Power", value: "956 kW" },
+      { label: "Speed", value: "12.0 knots" },
+      { label: "Deadweight", value: "110 tonnes" },
+      { label: "BRL Scope", value: "Initial Design, Tender Assistance and Construction Supervision" },
+    ],
+  },
+  {
+    img: rvNaturalisteVessel,
+    name: "RV Naturaliste",
+    type: "22.6 metre Fisheries Research Vessel",
+    specs: [
+      { label: "Length Overall", value: "22.6 metres" },
+      { label: "Beam", value: "6.850 metres" },
+      { label: "Installed Power", value: "448 kW" },
+      { label: "Speed", value: "9.5 knots" },
+      { label: "BRL Scope", value: "Initial Design, Tender Assistance and Construction Supervision" },
+    ],
+  },
+  {
+    img: alcyoneVessel,
+    name: "Alcyone II, 34-South",
+    type: "24.3 metre Longline Fishing Vessel (2 off)",
+    specs: [
+      { label: "Length Overall", value: "24.36 metres" },
+      { label: "Beam", value: "7.0 metres" },
+      { label: "Installed Power", value: "597 kW" },
+      { label: "Speed", value: "9.5 knots" },
+      { label: "Deadweight", value: "83 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: apolloSVessel,
+    name: "Apollo S",
+    type: "44.9 metre Purse Seine Vessel",
+    specs: [
+      { label: "Length Overall", value: "44.9 metres" },
+      { label: "Beam", value: "10.7 metres" },
+      { label: "Installed Power", value: "1620 kW" },
+      { label: "Speed", value: "13.0 knots" },
+      { label: "BRL Scope", value: "Full Scope of Shipyard Detailed Design" },
+    ],
+  },
+  {
+    img: discoveryIII,
+    name: "Discovery III",
+    type: "24.3 metre Longline Fishing Vessel",
+    specs: [
+      { label: "Length Overall", value: "24.36 metres" },
+      { label: "Beam", value: "7.0 metres" },
+      { label: "Installed Power", value: "448 kW" },
+      { label: "Speed", value: "9.5 knots" },
+      { label: "Deadweight", value: "77 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: nalenaBay,
+    name: "Nalena Bay",
+    type: "34.75 metre Pearling Vessel",
+    specs: [
+      { label: "Length Overall", value: "34.75 metres" },
+      { label: "Beam", value: "7.79 metres" },
+      { label: "Installed Power", value: "672 kW" },
+      { label: "Speed", value: "10.5 knots" },
+      { label: "Deadweight", value: "232 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: josephConrad,
+    name: "Joseph Conrad",
+    type: "30.9 metre Pearling Vessel",
+    specs: [
+      { label: "Length Overall", value: "30.9 metres" },
+      { label: "Beam", value: "7.79 metres" },
+      { label: "Installed Power", value: "672 kW" },
+      { label: "Speed", value: "10.0 knots" },
+      { label: "Deadweight", value: "170 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: rvMeen,
+    name: "RV Meen Shandhini",
+    type: "37.8 metre Fisheries Research / Survey Vessel",
+    specs: [
+      { label: "Length Overall", value: "37.8 metres" },
+      { label: "Beam", value: "9.2 metres" },
+      { label: "Installed Power", value: "1044 kW" },
+      { label: "Speed", value: "10.0 knots" },
+      { label: "Deadweight", value: "194 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+];
+
 function VesselCard({ vessel }: { vessel: typeof cargoVessels[number] }) {
   return (
     <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
@@ -194,6 +307,24 @@ function VesselsPage() {
           </p>
           <div className="mt-12 space-y-6">
             {defenceVessels.map((v) => (
+              <VesselCard key={v.name} vessel={v} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Fishing and Research Vessels ── */}
+      <section id="fishing-research" className="py-24 bg-background">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <p className="eyebrow mb-4">Category 03</p>
+          <h2 className="text-3xl font-bold text-primary sm:text-4xl">Fishing and Research Vessels</h2>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            BRL has been involved in the design and development of specialised fishing and research vessels,
+            combining advanced naval architecture with the operational demands of scientific exploration and
+            sustainable marine resource management.
+          </p>
+          <div className="mt-12 space-y-6">
+            {fishingResearchVessels.map((v) => (
               <VesselCard key={v.name} vessel={v} />
             ))}
           </div>

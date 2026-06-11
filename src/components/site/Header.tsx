@@ -5,13 +5,12 @@ import projectDropdownPic from "@/assets/project-dropdownpic.jpg";
 import aboutDropdownPic from "@/assets/card-story.jpg";
 import servicesDropdownPic from "@/assets/card-services.jpg";
 
-const primaryNav = ["Vessels", "Projects", "Markets", "Services", "About"];
+const primaryNav = ["Vessels", "Projects", "Brokerage", "Services", "About"];
 
 const vesselCategories = [
   { label: "Cargo/Commercial", href: "/vessels#cargo-commercial" },
   { label: "Defence and Patrol", href: "/vessels#defence-patrol" },
-  { label: "Fishing", href: "/vessels#fishing" },
-  { label: "Research", href: "/vessels#research" },
+  { label: "Fishing and Research", href: "/vessels#fishing-research" },
 ];
 
 const aboutCategories = [

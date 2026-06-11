@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import drillingImg from "@/assets/drillingimg.png";
 import shipManagementImg from "@/assets/ship management.jpeg";
+import crewmenImg from "@/assets/crewmen.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -146,6 +147,76 @@ function ServicesPage() {
                   </div>
                 ))}
               </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Crew Management ── */}
+      <section id="crew-management" className="py-24 bg-background">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 03</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Crew Management</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                Attracting, recruiting, training, deploying and developing highly skilled seafarers for your vessels
+                is the core purpose of our crew management business. You can be assured we will offer your fleet the
+                right mix of crew, with the right skillsets and competence, at the right time, to optimise your
+                vessel and commercial performance.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Operating from well-established Crew Management Centres around the world, we deal seamlessly with
+                every aspect of crew management operations for every maritime segment, reducing your operating costs,
+                and delivering world-class operations.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Whether you require a single specialist seafarer, or a turnkey solution for managing the full
+                complement for every vessel in your fleet, our scale and global reach means we can offer you flexible
+                and responsive crew management services tailored to suit your needs. Our dedication to safety,
+                customer care, and quality, coupled with access to the industry's largest network of maritime talent,
+                means that we are trusted the world over as a market leader in crew management services.
+              </p>
+
+              {/* Sub-sections */}
+              <div className="mt-10 space-y-8">
+                {[
+                  {
+                    title: "Crew Supply",
+                    body: "With the world's largest database of certified and competent seafarers, B & R Marine Energy Logistics can meet all your crew supply requirements rapidly, and at scale.",
+                  },
+                  {
+                    title: "Training",
+                    body: "Training a multinational crew is essential to safe and successful operations, but it can be a complex and time-consuming process. We streamline and manage this for you.",
+                  },
+                  {
+                    title: "Crew Services",
+                    body: "From serving seafarers on merchant fleets and cargo vessels to ensuring guests aboard cruise liners and luxury yachts enjoy a 5-star dining experience, our crew services cover a diverse range of needs to satisfy and exceed the expectations of seafarers, crew and passengers alike.",
+                  },
+                  {
+                    title: "Traveling",
+                    body: "In a global maritime industry, you need to transport your people efficiently and cost effectively. Who better to trust than a leading industry travel management company who successfully moves over 100,000 maritime personnel every year?",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="border-l-4 border-accent pl-5">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-primary">{item.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={crewmenImg}
+                alt="Crew Management"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
 
           </div>

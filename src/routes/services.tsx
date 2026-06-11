@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import drillingImg from "@/assets/drillingimg.png";
 import shipManagementImg from "@/assets/ship management.jpeg";
 import crewmenImg from "@/assets/crewmen.png";
+import shipTechImg from "@/assets/ship tech.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -217,6 +218,71 @@ function ServicesPage() {
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Ship Technical Services ── */}
+      <section id="ship-technical-services" className="py-24 bg-secondary">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={shipTechImg}
+                alt="Ship Technical Services"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 04</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Ship Technical Services</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics delivers comprehensive ship technical services designed to keep
+                your vessels operating at peak performance, in full regulatory compliance, and at the lowest possible
+                cost. Our experienced team of naval architects, marine engineers and technical superintendents work
+                closely with vessel owners and operators to provide end-to-end technical support across every stage
+                of a vessel's lifecycle.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                From routine planned maintenance and dry-docking management through to emergency response and
+                complex repair projects, our technical team brings the expertise, responsiveness and global network
+                needed to resolve challenges swiftly and effectively. We are committed to maintaining the highest
+                standards of vessel integrity, seaworthiness and operational readiness for every asset under our care.
+              </p>
+
+              {/* Sub-sections */}
+              <div className="mt-10 space-y-8">
+                {[
+                  {
+                    title: "Planned Maintenance",
+                    body: "We implement and oversee structured planned maintenance systems (PMS) to ensure all machinery, equipment and hull components are serviced on schedule, reducing unplanned downtime and extending the operational life of your assets.",
+                  },
+                  {
+                    title: "Dry-Docking & Repairs",
+                    body: "Our technical team manages the full dry-docking process — from specification and tendering to yard supervision and sea trials — ensuring projects are delivered on time, within budget, and to the highest quality standards.",
+                  },
+                  {
+                    title: "Procurement & Spare Parts",
+                    body: "Leveraging our global supplier network, we source and procure quality-approved spare parts, consumables and technical equipment at competitive prices, ensuring timely delivery to vessels wherever they operate in the world.",
+                  },
+                  {
+                    title: "Technical Inspections & Vetting",
+                    body: "Our superintendents conduct regular condition inspections, vetting preparations and class survey support to ensure vessels remain compliant with flag state requirements, class regulations and oil major vetting standards at all times.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="border-l-4 border-accent pl-5">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-primary">{item.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>

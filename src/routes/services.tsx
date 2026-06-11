@@ -9,6 +9,7 @@ import torqueImg from "@/assets/torque.png";
 import processControlImg from "@/assets/processcontrol.png";
 import petroImg from "@/assets/petro.png";
 import indusImg from "@/assets/indus.png";
+import vesselInspectImg from "@/assets/vesselinspect.jpeg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -573,6 +574,72 @@ function ServicesPage() {
                   </div>
                 ))}
               </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Vessel Survey / Marine Inspection Services ── */}
+      <section id="vessel-survey-inspection" className="py-24 bg-background">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 09</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Vessel Survey / Marine Inspection Services</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics provides comprehensive vessel survey and marine inspection services
+                to ship owners, operators, charterers, insurers, and financial institutions. Our team of qualified
+                surveyors and marine inspectors brings decades of hands-on experience across all vessel types —
+                from tankers and bulk carriers to offshore support vessels and passenger craft.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Whether you require a pre-purchase condition survey, a flag state inspection, a damage assessment,
+                or ongoing class survey support, we deliver accurate, independent and timely reports that protect
+                your interests and keep your vessels compliant with all applicable regulations.
+              </p>
+
+              <div className="mt-10 space-y-8">
+                {[
+                  {
+                    title: "Pre-Purchase & Condition Surveys",
+                    body: "Our inspectors carry out thorough condition surveys on vessels prior to purchase or charter, assessing hull integrity, machinery condition, safety equipment, and overall seaworthiness — giving buyers and charterers full confidence in their decisions.",
+                  },
+                  {
+                    title: "Class & Statutory Surveys",
+                    body: "We provide support for class renewal surveys, annual and intermediate surveys, dry-docking surveys, and statutory inspections required under SOLAS, MARPOL, MLC and flag state regulations, ensuring vessels maintain their certificates without delays.",
+                  },
+                  {
+                    title: "Damage & Casualty Surveys",
+                    body: "In the event of a collision, grounding, fire or structural failure, our surveyors attend promptly to assess the extent of damage, determine causation, and produce detailed reports for P&I clubs, underwriters and legal proceedings.",
+                  },
+                  {
+                    title: "Cargo & Hatch Surveys",
+                    body: "We conduct pre-loading and on-completion cargo surveys, hatch condition inspections and draft surveys to protect cargo interests, resolve disputes and ensure accurate quantity and quality records for charterers and traders.",
+                  },
+                  {
+                    title: "Vetting & SIRE Inspections",
+                    body: "Our inspectors prepare vessels for oil major vetting and SIRE/CDI inspections, identifying deficiencies in advance and supporting crews and operators to achieve high inspection scores and maintain tanker approval status.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="border-l-4 border-accent pl-5">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-primary">{item.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={vesselInspectImg}
+                alt="Vessel Survey and Marine Inspection"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
 
           </div>

@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import enduranceVessel from "@/assets/endurance vessel.jpg";
 import bhagwanRocker from "@/assets/bhagwan rocker vessel.jpeg";
+import alamoVessel from "@/assets/alamo vessel.jpg";
 
 export const Route = createFileRoute("/vessels")({
   head: () => ({
@@ -42,6 +43,19 @@ const cargoVessels = [
       { label: "Installed Power", value: "750 kW" },
       { label: "Speed", value: "10.0 knots" },
       { label: "Deadweight", value: "263 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: alamoVessel,
+    name: "Alamo",
+    type: "27.2 metre Work Vessel",
+    specs: [
+      { label: "Length Overall", value: "27.2 metres" },
+      { label: "Beam", value: "11.0 metres" },
+      { label: "Installed Power", value: "750 kW" },
+      { label: "Speed", value: "10.0 knots" },
+      { label: "Deadweight", value: "185 tonnes" },
       { label: "BRL Scope", value: "Full Design Package" },
     ],
   },

@@ -6,6 +6,7 @@ import shipManagementImg from "@/assets/ship management.jpeg";
 import crewmenImg from "@/assets/crewmen.png";
 import shipTechImg from "@/assets/ship tech.png";
 import torqueImg from "@/assets/torque.png";
+import processControlImg from "@/assets/processcontrol.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -393,6 +394,71 @@ function ServicesPage() {
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Process Control and Instrumentation ── */}
+      <section id="process-control-instrumentation" className="py-24 bg-secondary">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={processControlImg}
+                alt="Process Control and Instrumentation"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 06</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Process Control and Instrumentation</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                We provide Instrumentation &amp; Control contracting services to a wide range of industries including
+                Oil &amp; Gas, Petrochemical, Power &amp; Energy, Water and Waste Water, Infrastructure, Refinery,
+                Fertilizer, Chemical, Cement, LNG, and Steel. Our comprehensive scope covers process automation,
+                control systems and field instrumentation from concept through to commissioning.
+              </p>
+
+              {/* Systems */}
+              <div className="mt-10 border-l-4 border-accent pl-5">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-primary">Systems &amp; Equipment</h3>
+              </div>
+              <ul className="mt-4 space-y-3">
+                {[
+                  "DCS & PLC Systems",
+                  "ESD (Emergency Shutdown) Systems",
+                  "Fire & Gas Systems",
+                  "PLC/RTU Systems",
+                  "SCADA/HMI Systems",
+                  "Field Instruments & Drives",
+                  "Transmitters, switches & gauges for temperature, pressure, flow, and level applications",
+                  "Control valves, On/Off valves, Breather valves, and Safety valves",
+                  "Testing, calibration and loop checking of pressure, temperature, flow and level instruments",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
+                    <span className="text-base leading-relaxed text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Automation & Control */}
+              <div className="mt-10 border-l-4 border-accent pl-5">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-primary">Process Automation &amp; Control</h3>
+              </div>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                We deliver services in process automation and control systems including Distribution Control System
+                (DCS), Programmable Logic Controller (PLC), Batch Control, Validation (ANSI/ISA S88.01), Field Bus,
+                Profibus, AS-Interface, Device Net, PID and Advanced Control Measurement, OLE for process control,
+                Process Instrumentation and Industrial Automation Training.
+              </p>
             </div>
 
           </div>

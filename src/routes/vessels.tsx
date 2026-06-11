@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import enduranceVessel from "@/assets/endurance vessel.jpg";
+import bhagwanRocker from "@/assets/bhagwan rocker vessel.jpeg";
 
 export const Route = createFileRoute("/vessels")({
   head: () => ({
@@ -28,6 +29,19 @@ const cargoVessels = [
       { label: "Installed Power", value: "2160 kW" },
       { label: "Speed", value: "10.5 knots" },
       { label: "Deadweight", value: "549 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: bhagwanRocker,
+    name: "Bhagwan Rocker",
+    type: "38 metre Landing Craft",
+    specs: [
+      { label: "Length Overall", value: "38.0 metres" },
+      { label: "Beam", value: "10.6 metres" },
+      { label: "Installed Power", value: "750 kW" },
+      { label: "Speed", value: "10.0 knots" },
+      { label: "Deadweight", value: "263 tonnes" },
       { label: "BRL Scope", value: "Full Design Package" },
     ],
   },

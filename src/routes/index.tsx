@@ -244,16 +244,13 @@ function ContactPanel({ open, onClose }: { open: boolean; onClose: () => void })
           </h2>
 
           <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
-            {/* First / Last name row */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-              <div>
-                <label style={labelStyle}>First name <span style={{ color: "red" }}>*</span></label>
-                <input required placeholder="Your first name" style={inputStyle} />
-              </div>
-              <div>
-                <label style={labelStyle}>Last name <span style={{ color: "red" }}>*</span></label>
-                <input required placeholder="Your last name" style={inputStyle} />
-              </div>
+            <div>
+              <label style={labelStyle}>First name <span style={{ color: "red" }}>*</span></label>
+              <input required placeholder="Your First name" style={inputStyle} />
+            </div>
+            <div>
+              <label style={labelStyle}>Last name <span style={{ color: "red" }}>*</span></label>
+              <input required placeholder="Your Last name" style={inputStyle} />
             </div>
 
             {/* Email */}

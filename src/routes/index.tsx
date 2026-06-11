@@ -474,7 +474,7 @@ function Index() {
             Contact us and get in touch with the experts in field.
           </p>
           <a
-            href="#"
+            href="/vacancies"
             className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-accent px-7 py-4 text-sm font-semibold text-accent-foreground transition-transform hover:scale-[1.03]"
           >
             View vacancies <ArrowRight className="h-4 w-4" />

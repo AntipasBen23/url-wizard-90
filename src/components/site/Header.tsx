@@ -144,7 +144,7 @@ export function Header() {
             <span style={{ display: "block", position: "absolute", bottom: "-4px", left: 0, height: "1px", width: hoveredNav === "news" ? "100%" : "0", backgroundColor: "white", transition: "width 0.3s ease" }} />
           </a>
           <a
-            href="#"
+            href="/vacancies"
             className={`relative inline-flex items-center gap-1 text-sm font-medium transition-colors ${textMuted}`}
             onMouseEnter={() => setHoveredNav("career")}
             onMouseLeave={() => setHoveredNav(null)}

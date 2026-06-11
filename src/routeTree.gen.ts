@@ -16,6 +16,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as VesselsRouteImport } from './routes/vessels'
 import { Route as BrokerageRouteImport } from './routes/brokerage'
+import { Route as VacanciesRouteImport } from './routes/vacancies'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -52,6 +53,11 @@ const BrokerageRoute = BrokerageRouteImport.update({
   path: '/brokerage',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VacanciesRoute = VacanciesRouteImport.update({
+  id: '/vacancies',
+  path: '/vacancies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/vessels': typeof VesselsRoute
   '/brokerage': typeof BrokerageRoute
+  '/vacancies': typeof VacanciesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/vessels': typeof VesselsRoute
   '/brokerage': typeof BrokerageRoute
+  '/vacancies': typeof VacanciesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,13 +88,14 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/vessels': typeof VesselsRoute
   '/brokerage': typeof BrokerageRoute
+  '/vacancies': typeof VacanciesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml' | '/projects' | '/about' | '/services' | '/vessels' | '/brokerage'
+  fullPaths: '/' | '/sitemap.xml' | '/projects' | '/about' | '/services' | '/vessels' | '/brokerage' | '/vacancies'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml' | '/projects' | '/about' | '/services' | '/vessels' | '/brokerage'
-  id: '__root__' | '/' | '/sitemap.xml' | '/projects' | '/about' | '/services' | '/vessels' | '/brokerage'
+  to: '/' | '/sitemap.xml' | '/projects' | '/about' | '/services' | '/vessels' | '/brokerage' | '/vacancies'
+  id: '__root__' | '/' | '/sitemap.xml' | '/projects' | '/about' | '/services' | '/vessels' | '/brokerage' | '/vacancies'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -97,6 +106,7 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   VesselsRoute: typeof VesselsRoute
   BrokerageRoute: typeof BrokerageRoute
+  VacanciesRoute: typeof VacanciesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -150,6 +160,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrokerageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/vacancies': {
+      id: '/vacancies'
+      path: '/vacancies'
+      fullPath: '/vacancies'
+      preLoaderRoute: typeof VacanciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -161,6 +178,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   VesselsRoute: VesselsRoute,
   BrokerageRoute: BrokerageRoute,
+  VacanciesRoute: VacanciesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

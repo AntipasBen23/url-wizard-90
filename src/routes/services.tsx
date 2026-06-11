@@ -7,6 +7,7 @@ import crewmenImg from "@/assets/crewmen.png";
 import shipTechImg from "@/assets/ship tech.png";
 import torqueImg from "@/assets/torque.png";
 import processControlImg from "@/assets/processcontrol.png";
+import petroImg from "@/assets/petro.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -459,6 +460,51 @@ function ServicesPage() {
                 Profibus, AS-Interface, Device Net, PID and Advanced Control Measurement, OLE for process control,
                 Process Instrumentation and Industrial Automation Training.
               </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Petroleum Product Supply and Importations ── */}
+      <section id="petroleum-product-supply" className="py-24 bg-background">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 07</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Petroleum Product Supply and Importations</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                BR Marine Energy Logistics does direct supply of petroleum products both at seaports and offshore
+                operations, working directly with clients and customers in the procurement, supply and delivery of
+                petroleum products to their satisfaction without loss of lag time. We also supply to boats, tugs,
+                barges, tankers, vessels, companies and home delivery.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Our product line includes a full range of petroleum products sourced and delivered efficiently
+                across all sectors of the energy market.
+              </p>
+
+              {/* Importation sub-section */}
+              <div className="mt-10 border-l-4 border-accent pl-5">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-primary">Importation of Petroleum Products</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  Marketing &amp; Distribution of AGO to both onshore &amp; offshore — tank farms, companies, large
+                  organisations, hotels, hospitals, eateries, schools and telecom base stations — at affordable cost
+                  with our fleet of trucks.
+                </p>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative h-[380px] overflow-hidden rounded-sm">
+              <img
+                src={petroImg}
+                alt="Petroleum Product Supply and Importations"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
 
           </div>

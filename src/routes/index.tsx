@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
           "B & R Marine Energy Logistics is your trusted partner in maritime energy solutions and logistics services.",
       },
       { property: "og:title", content: "B & R Marine Energy Logistics" },
-      { property: "og:description", content: "An ocean of possibilities. Building ships since 1927." },
+      { property: "og:description", content: "An ocean of possibilities. Building ships since 2002." },
       { property: "og:image", content: "/og-image.jpg" },
     ],
   }),
@@ -412,7 +412,7 @@ function Index() {
       <section className="bg-background py-24">
         <div className="mx-auto max-w-3xl px-5 text-center">
           <p className="eyebrow">An ocean of possibilities</p>
-          <h2 className="mt-5 text-4xl font-bold text-primary sm:text-5xl">Building ships since 1927</h2>
+          <h2 className="mt-5 text-4xl font-bold text-primary sm:text-5xl">Building ships since 2002</h2>
           <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
             B & R Marine Energy Logistics is an international maritime energy logistics company but at its heart, there is still a family company. We operate in
             every market where we see an opportunity to improve, innovate or invest. At B & R Marine we make time to listen to

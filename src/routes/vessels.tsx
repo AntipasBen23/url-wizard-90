@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import enduranceVessel from "@/assets/endurance vessel.jpg";
 import bhagwanRocker from "@/assets/bhagwan rocker vessel.jpeg";
 import alamoVessel from "@/assets/alamo vessel.jpg";
+import bhagwanShaker from "@/assets/bhagwan shaker.jpeg";
 
 export const Route = createFileRoute("/vessels")({
   head: () => ({
@@ -56,6 +57,19 @@ const cargoVessels = [
       { label: "Installed Power", value: "750 kW" },
       { label: "Speed", value: "10.0 knots" },
       { label: "Deadweight", value: "185 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+  {
+    img: bhagwanShaker,
+    name: "Bhagwan Shaker",
+    type: "48.5 metre Landing Craft",
+    specs: [
+      { label: "Length Overall", value: "48.5 metres" },
+      { label: "Beam", value: "12.80 metres" },
+      { label: "Installed Power", value: "900 kW" },
+      { label: "Speed", value: "11.2 knots" },
+      { label: "Deadweight", value: "490 tonnes" },
       { label: "BRL Scope", value: "Full Design Package" },
     ],
   },

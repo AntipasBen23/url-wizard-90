@@ -8,6 +8,7 @@ import shipTechImg from "@/assets/ship tech.png";
 import torqueImg from "@/assets/torque.png";
 import processControlImg from "@/assets/processcontrol.png";
 import petroImg from "@/assets/petro.png";
+import indusImg from "@/assets/indus.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -505,6 +506,73 @@ function ServicesPage() {
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── Industrial Tank Cleaning Services ── */}
+      <section id="industrial-tank-cleaning" className="py-24 bg-secondary">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* Image */}
+            <div className="relative h-[420px] overflow-hidden rounded-sm lg:sticky lg:top-28">
+              <img
+                src={indusImg}
+                alt="Industrial Tank Cleaning Services"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+            </div>
+
+            {/* Text */}
+            <div>
+              <p className="eyebrow mb-4">Service 08</p>
+              <h2 className="text-3xl font-bold text-primary sm:text-4xl">Industrial Tank Cleaning Services</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+                B &amp; R Marine Energy Logistics provides professional industrial tank cleaning services across
+                onshore and offshore environments. Our highly trained teams deploy industry-approved techniques and
+                equipment to clean, degas, and prepare storage tanks for inspection, maintenance, product changeover,
+                or decommissioning — all in strict compliance with international health, safety and environmental
+                standards.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                With experience across crude oil tanks, fuel storage tanks, chemical tanks, water storage vessels and
+                marine cargo tanks, we deliver efficient, cost-effective cleaning solutions that minimise downtime
+                and protect the integrity of your assets.
+              </p>
+
+              <div className="mt-10 space-y-8">
+                {[
+                  {
+                    title: "Tank Degassing & Vapour Freeing",
+                    body: "We safely remove flammable and toxic vapours from tank interiors using controlled ventilation and gas-freeing procedures, ensuring tanks meet gas-free certification requirements before any personnel entry or hot work commences.",
+                  },
+                  {
+                    title: "Sludge & Residue Removal",
+                    body: "Our teams use mechanical and hydro-jetting equipment to break down and remove accumulated sludge, sediment and hydrocarbon residues from tank floors and walls, restoring full usable capacity and reducing corrosion risk.",
+                  },
+                  {
+                    title: "High-Pressure Water Jetting",
+                    body: "We deploy high-pressure water jetting systems to remove scale, coatings and residual product deposits from tank surfaces, preparing them for internal inspection, recoating or product changeover with minimal waste generation.",
+                  },
+                  {
+                    title: "Waste Management & Disposal",
+                    body: "All waste streams generated during tank cleaning — including sludge, contaminated water and chemical residues — are handled, transported and disposed of in compliance with local and international environmental regulations.",
+                  },
+                  {
+                    title: "Safety & Compliance",
+                    body: "Every tank cleaning operation is governed by a comprehensive method statement and risk assessment. Our personnel are trained in confined space entry, permit-to-work procedures, and the use of gas detection and personal protective equipment to ensure zero-harm outcomes.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="border-l-4 border-accent pl-5">
+                    <h3 className="text-sm font-bold uppercase tracking-widest text-primary">{item.title}</h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>

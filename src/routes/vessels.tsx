@@ -7,6 +7,7 @@ import alamoVessel from "@/assets/alamo vessel.jpg";
 import bhagwanShaker from "@/assets/bhagwan shaker.jpeg";
 import alBasrahVessel from "@/assets/Ai basrah vessel.jpeg";
 import tbdVessel from "@/assets/tbd vessel.jpg";
+import nemesisVessel from "@/assets/nemesis vessel.jpg";
 
 export const Route = createFileRoute("/vessels")({
   head: () => ({
@@ -101,6 +102,18 @@ const defenceVessels = [
       { label: "Installed Power", value: "4080 kW" },
       { label: "Speed", value: "30.0 knots" },
       { label: "BRL Scope", value: "Full Tender Package" },
+    ],
+  },
+  {
+    img: nemesisVessel,
+    name: "Nemesis",
+    type: "32.0 metre Offshore Patrol Vessel",
+    specs: [
+      { label: "Length Overall", value: "32.0 metres" },
+      { label: "Beam", value: "7.2 metres" },
+      { label: "Installed Power", value: "2690 kW" },
+      { label: "Speed", value: "27.0 knots" },
+      { label: "BRL Scope", value: "Tender Assistance and Construction Supervision" },
     ],
   },
 ];

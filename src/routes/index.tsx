@@ -174,7 +174,7 @@ function ContactPanel({ open, onClose }: { open: boolean; onClose: () => void })
           bottom: 0,
           zIndex: 61,
           display: "flex",
-          width: "min(92vw, 960px)",
+          width: "min(90vw, 860px)",
           transform: open ? "translateX(0)" : "translateX(100%)",
           transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
           boxShadow: "-8px 0 40px rgba(0,0,0,0.25)",
@@ -182,7 +182,7 @@ function ContactPanel({ open, onClose }: { open: boolean; onClose: () => void })
       >
         {/* Left — contact info */}
         <div
-          style={{ flex: "0 0 42%", overflowY: "auto", backgroundColor: "#f4f6f8", padding: "2rem 1.75rem" }}
+          style={{ flex: "0 0 48%", overflowY: "auto", backgroundColor: "#f4f6f8", padding: "2rem 1.75rem" }}
         >
           <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#0a1f44", marginBottom: "1.75rem" }}>
             B &amp; R Marine Energy Logistics

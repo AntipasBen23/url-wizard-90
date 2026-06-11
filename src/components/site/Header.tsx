@@ -8,10 +8,10 @@ import servicesDropdownPic from "@/assets/card-services.jpg";
 const primaryNav = ["Vessels", "Projects", "Markets", "Services", "About"];
 
 const vesselCategories = [
-  "Cargo/Commercial",
-  "Defence and Patrol",
-  "Fishing",
-  "Research",
+  { label: "Cargo/Commercial", href: "/vessels#cargo-commercial" },
+  { label: "Defence and Patrol", href: "/vessels#defence-patrol" },
+  { label: "Fishing", href: "/vessels#fishing" },
+  { label: "Research", href: "/vessels#research" },
 ];
 
 const aboutCategories = [
@@ -183,14 +183,15 @@ export function Header() {
                   <p className="eyebrow mb-4">Vessel Categories</p>
                   <ul className="border-l-[3px] border-accent pl-4 space-y-3">
                     {vesselCategories.map((cat) => {
-                      const isHovered = hoveredCat === cat;
+                      const isHovered = hoveredCat === cat.label;
                       return (
-                        <li key={cat}>
+                        <li key={cat.label}>
                           <a
-                            href="#"
+                            href={cat.href}
                             style={{ cursor: "pointer", display: "block", textDecoration: "none" }}
-                            onMouseEnter={() => setHoveredCat(cat)}
+                            onMouseEnter={() => setHoveredCat(cat.label)}
                             onMouseLeave={() => setHoveredCat(null)}
+                            onClick={() => setDropdown(null)}
                           >
                             <span
                               style={{
@@ -201,7 +202,7 @@ export function Header() {
                                 transition: "color 0.2s ease, opacity 0.2s ease",
                               }}
                             >
-                              {cat}
+                              {cat.label}
                             </span>
                           </a>
                         </li>
@@ -219,9 +220,9 @@ export function Header() {
                   <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
                     <p className="eyebrow text-white mb-2">Proven design, short term delivery</p>
                     <h3 className="text-2xl font-bold">Vessels in stock</h3>
-                    <button className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
+                    <a href="/vessels" onClick={() => setDropdown(null)} className="mt-4 inline-flex items-center gap-2 border-2 border-white/80 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-white hover:text-primary">
                       More information <ChevronRight className="h-4 w-4" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

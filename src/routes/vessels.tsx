@@ -5,6 +5,7 @@ import enduranceVessel from "@/assets/endurance vessel.jpg";
 import bhagwanRocker from "@/assets/bhagwan rocker vessel.jpeg";
 import alamoVessel from "@/assets/alamo vessel.jpg";
 import bhagwanShaker from "@/assets/bhagwan shaker.jpeg";
+import alBasrahVessel from "@/assets/Ai basrah vessel.jpeg";
 
 export const Route = createFileRoute("/vessels")({
   head: () => ({
@@ -75,6 +76,22 @@ const cargoVessels = [
   },
 ];
 
+const defenceVessels = [
+  {
+    img: alBasrahVessel,
+    name: "Al Basrah, Al Fayhaa",
+    type: "60.0 metre Offshore Patrol Vessel (2 off)",
+    specs: [
+      { label: "Length Overall", value: "60.0 metres" },
+      { label: "Beam", value: "11.2 metres" },
+      { label: "Installed Power", value: "4360 kW" },
+      { label: "Speed", value: "17.0 knots" },
+      { label: "Deadweight", value: "550 tonnes" },
+      { label: "BRL Scope", value: "Full Design Package" },
+    ],
+  },
+];
+
 function VesselCard({ vessel }: { vessel: typeof cargoVessels[number] }) {
   return (
     <div className="group flex flex-col sm:flex-row overflow-hidden rounded-sm bg-white hover:shadow-lg transition-shadow duration-300">
@@ -133,6 +150,24 @@ function VesselsPage() {
           </p>
           <div className="mt-12 space-y-6">
             {cargoVessels.map((v) => (
+              <VesselCard key={v.name} vessel={v} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Defence and Patrol Vessels ── */}
+      <section id="defence-patrol" className="py-24 bg-secondary">
+        <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
+          <p className="eyebrow mb-4">Category 02</p>
+          <h2 className="text-3xl font-bold text-primary sm:text-4xl">Defence and Patrol Vessels</h2>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            BRL has worked with government and commercial clients on various projects in the naval / defence /
+            coast guard / law enforcement market, primarily for patrol boats. This has included police boats,
+            fast patrol craft and offshore patrol vessels (OPV) in both steel and aluminium.
+          </p>
+          <div className="mt-12 space-y-6">
+            {defenceVessels.map((v) => (
               <VesselCard key={v.name} vessel={v} />
             ))}
           </div>

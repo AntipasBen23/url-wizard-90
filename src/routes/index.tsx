@@ -174,7 +174,7 @@ function ContactPanel({ open, onClose }: { open: boolean; onClose: () => void })
           bottom: 0,
           zIndex: 61,
           display: "flex",
-          width: "min(90vw, 860px)",
+          width: "min(88vw, 780px)",
           transform: open ? "translateX(0)" : "translateX(100%)",
           transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
           boxShadow: "-8px 0 40px rgba(0,0,0,0.25)",
@@ -220,7 +220,7 @@ function ContactPanel({ open, onClose }: { open: boolean; onClose: () => void })
         </div>
 
         {/* Right — contact form */}
-        <div style={{ flex: 1, overflowY: "auto", backgroundColor: "#ffffff", padding: "2rem 2rem 2rem 1.75rem", position: "relative" }}>
+        <div style={{ flex: 1, overflowY: "auto", backgroundColor: "#ffffff", padding: "1.5rem 1.5rem 1.5rem 1.25rem", position: "relative" }}>
           {/* Close button */}
           <button
             onClick={onClose}
@@ -243,7 +243,7 @@ function ContactPanel({ open, onClose }: { open: boolean; onClose: () => void })
             Contact form
           </h2>
 
-          <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
+          <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
             <div>
               <label style={labelStyle}>First name <span style={{ color: "red" }}>*</span></label>
               <input required placeholder="Your First name" style={inputStyle} />
@@ -357,14 +357,15 @@ const labelStyle: React.CSSProperties = {
 
 const inputStyle: React.CSSProperties = {
   width: "100%",
-  padding: "0.6rem 0.75rem",
-  fontSize: "0.82rem",
+  padding: "0.45rem 0.65rem",
+  fontSize: "0.8rem",
   border: "1px solid #d1d5db",
   borderRadius: "2px",
   outline: "none",
   color: "#0a1f44",
   backgroundColor: "#fff",
   boxSizing: "border-box",
+  height: "2.6rem",
 };
 
 function Index() {

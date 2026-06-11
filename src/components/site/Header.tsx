@@ -58,6 +58,9 @@ export function Header() {
   const [hoveredBrokerage, setHoveredBrokerage] = useState<string | null>(null);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+  const [newsMsg, setNewsMsg] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -77,6 +80,14 @@ export function Header() {
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  // Close search overlay on Escape
+  useEffect(() => {
+    if (!searchOpen) return;
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") setSearchOpen(false); };
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  }, [searchOpen]);
 
   const dropdownOpen = dropdown !== null;
 
@@ -134,15 +145,23 @@ export function Header() {
 
         {/* Right cluster */}
         <div className="ml-auto hidden items-center gap-6 lg:flex">
-          <a
-            href="#news"
-            className={`relative text-sm font-medium transition-colors ${textMuted}`}
-            onMouseEnter={() => setHoveredNav("news")}
-            onMouseLeave={() => setHoveredNav(null)}
-          >
-            News &amp; Insights
-            <span style={{ display: "block", position: "absolute", bottom: "-4px", left: 0, height: "1px", width: hoveredNav === "news" ? "100%" : "0", backgroundColor: "white", transition: "width 0.3s ease" }} />
-          </a>
+          <div className="relative">
+            <button
+              onClick={() => { setNewsMsg(true); setTimeout(() => setNewsMsg(false), 2500); }}
+              onMouseEnter={() => setHoveredNav("news")}
+              onMouseLeave={() => setHoveredNav(null)}
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0, position: "relative" }}
+              className={`text-sm font-medium transition-colors ${textMuted}`}
+            >
+              News &amp; Insights
+              <span style={{ display: "block", position: "absolute", bottom: "-4px", left: 0, height: "1px", width: hoveredNav === "news" ? "100%" : "0", backgroundColor: "white", transition: "width 0.3s ease" }} />
+            </button>
+            {newsMsg && (
+              <div style={{ position: "absolute", top: "calc(100% + 10px)", left: "50%", transform: "translateX(-50%)", backgroundColor: "#0a1f44", color: "#fff", fontSize: "0.72rem", fontWeight: 600, padding: "0.35rem 0.75rem", borderRadius: "4px", whiteSpace: "nowrap", zIndex: 100 }}>
+                Coming soon!
+              </div>
+            )}
+          </div>
           <a
             href="/vacancies"
             className={`relative inline-flex items-center gap-1 text-sm font-medium transition-colors ${textMuted}`}
@@ -152,11 +171,15 @@ export function Header() {
             Career <ExternalLink className="h-3.5 w-3.5" />
             <span style={{ display: "block", position: "absolute", bottom: "-4px", left: 0, height: "1px", width: hoveredNav === "career" ? "100%" : "0", backgroundColor: "white", transition: "width 0.3s ease" }} />
           </a>
-          <button aria-label="Search" className={`transition-colors ${textMuted}`}>
+          <button
+            aria-label="Search"
+            onClick={() => { setSearchOpen(true); setSearchQuery(""); }}
+            className={`transition-colors ${textMuted}`}
+          >
             <Search className="h-5 w-5" />
           </button>
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-transform hover:scale-[1.03]"
           >
             Contact <LifeBuoy className="h-4 w-4" />
@@ -590,6 +613,105 @@ export function Header() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* ── Search overlay ── */}
+      {searchOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            onClick={() => setSearchOpen(false)}
+            style={{ position: "fixed", inset: 0, zIndex: 70, backgroundColor: "rgba(0,0,0,0.6)", backdropFilter: "blur(2px)" }}
+          />
+          {/* Panel */}
+          <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 71, backgroundColor: "#fff", boxShadow: "0 8px 40px rgba(0,0,0,0.18)", padding: "1.5rem 1.5rem 1rem" }}>
+            {/* Input row */}
+            <div style={{ maxWidth: "860px", margin: "0 auto", display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <Search style={{ width: "1.25rem", height: "1.25rem", flexShrink: 0, color: "oklch(0.55 0.2 262)" }} />
+              <input
+                autoFocus
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search vessels, services, projects, brokerage…"
+                style={{ flex: 1, fontSize: "1.05rem", border: "none", outline: "none", color: "#0a1f44", backgroundColor: "transparent" }}
+              />
+              <button
+                onClick={() => setSearchOpen(false)}
+                style={{ background: "none", border: "none", cursor: "pointer", padding: "0.25rem", color: "#0a1f44" }}
+                aria-label="Close search"
+              >
+                <X style={{ width: "1.3rem", height: "1.3rem" }} />
+              </button>
+            </div>
+            {/* Divider */}
+            <div style={{ maxWidth: "860px", margin: "0.9rem auto 0", height: "1px", backgroundColor: "#e5e7eb" }} />
+            {/* Results */}
+            <div style={{ maxWidth: "860px", margin: "0 auto", paddingTop: "0.75rem", paddingBottom: "0.5rem", maxHeight: "60vh", overflowY: "auto" }}>
+              {(() => {
+                const items = [
+                  { label: "Home", desc: "B & R Marine Energy Logistics – homepage", href: "/" },
+                  { label: "Vessels", desc: "Browse our full fleet of commercial, defence and research vessels", href: "/vessels" },
+                  { label: "Cargo / Commercial Vessels", desc: "Commercial cargo vessel designs", href: "/vessels#cargo-commercial" },
+                  { label: "Defence and Patrol Vessels", desc: "Naval and patrol vessel designs", href: "/vessels#defence-patrol" },
+                  { label: "Fishing and Research Vessels", desc: "Fishing, research and survey vessels", href: "/vessels#fishing-research" },
+                  { label: "Services", desc: "Full range of maritime and energy services", href: "/services" },
+                  { label: "Ship Management", desc: "Comprehensive vessel management services", href: "/services#ship-management" },
+                  { label: "Crew Management", desc: "Seafarer recruitment and crew management", href: "/services#crew-management" },
+                  { label: "Safety Training for Seafarers", desc: "Internationally recognised safety training", href: "/services#safety-training-seafarers" },
+                  { label: "Vessel Survey / Marine Inspection", desc: "Vessel survey and marine inspection services", href: "/services#vessel-survey-inspection" },
+                  { label: "Drilling Chemical and Fluids", desc: "Specialist drilling chemical and fluid supply", href: "/services#drilling-chemical-fluids" },
+                  { label: "Ship Technical Services", desc: "Technical maintenance and support for vessels", href: "/services#ship-technical-services" },
+                  { label: "Petroleum Product Supply", desc: "Petroleum product supply and importation", href: "/services#petroleum-product-supply" },
+                  { label: "Industrial Tank Cleaning", desc: "Industrial tank cleaning services", href: "/services#industrial-tank-cleaning" },
+                  { label: "Projects", desc: "Naval architecture, offshore and structural projects", href: "/projects" },
+                  { label: "Naval Architecture Projects", desc: "Naval architectural design and engineering", href: "/projects#naval-architectural-projects" },
+                  { label: "Offshore Engineering Projects", desc: "Offshore platform and structure engineering", href: "/projects#offshore-engineering-projects" },
+                  { label: "Structural Design & Analysis", desc: "Marine structural design and finite element analysis", href: "/projects#structural-design-analysis" },
+                  { label: "Brokerage", desc: "Shipbroking, chartering and advisory services", href: "/brokerage" },
+                  { label: "Market Analysis & Valuation", desc: "Fleet valuation and market intelligence", href: "/brokerage#market-analysis" },
+                  { label: "Sale & Purchase", desc: "Second-hand vessel sale and purchase", href: "/brokerage#sale-purchase" },
+                  { label: "Chartering", desc: "Voyage, time and bareboat chartering", href: "/brokerage#chartering" },
+                  { label: "Advisory & Consultancy", desc: "Strategic maritime advisory services", href: "/brokerage#advisory" },
+                  { label: "New Building Supervision", desc: "Newbuilding management and supervision", href: "/brokerage#new-building" },
+                  { label: "About B & R Marine", desc: "Our story, mission and team", href: "/about" },
+                  { label: "Mission & Vision", desc: "Our company mission, vision and values", href: "/about#mission-vision" },
+                  { label: "Our Team", desc: "Meet the B & R Marine leadership team", href: "/about#team" },
+                  { label: "Policies", desc: "Company policies and compliance", href: "/about#policies" },
+                  { label: "Careers / Vacancies", desc: "Join the B & R Marine team", href: "/vacancies" },
+                  { label: "Contact Us", desc: "Get in touch with our global offices", href: "/contact" },
+                  { label: "Lagos Office", desc: "Head office – Maple Close, Ikoyi, Lagos", href: "/contact" },
+                  { label: "Port Harcourt Office", desc: "Diamond Valley Estate, Odili Road, Port Harcourt", href: "/contact" },
+                  { label: "UK Office", desc: "5 William Merriman Road, Marlborough, UK", href: "/contact" },
+                  { label: "Panama Office", desc: "Edificio Comosa, Bellavista, Ciudad Panama", href: "/contact" },
+                  { label: "USA Office", desc: "410 SE 18th Street, Fort Lauderdale, FL", href: "/contact" },
+                ];
+                const q = searchQuery.trim().toLowerCase();
+                const filtered = q.length < 2 ? items : items.filter((it) => it.label.toLowerCase().includes(q) || it.desc.toLowerCase().includes(q));
+                if (filtered.length === 0) {
+                  return <p style={{ fontSize: "0.9rem", color: "#6b7280", padding: "0.5rem 0" }}>No results for &ldquo;{searchQuery}&rdquo;</p>;
+                }
+                return (
+                  <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+                    {filtered.map((item) => (
+                      <li key={item.href + item.label}>
+                        <a
+                          href={item.href}
+                          onClick={() => setSearchOpen(false)}
+                          style={{ display: "flex", flexDirection: "column", gap: "0.15rem", padding: "0.6rem 0.5rem", textDecoration: "none", borderRadius: "4px", transition: "background 0.15s" }}
+                          onMouseEnter={(e) => (e.currentTarget.style.background = "#f4f6f8")}
+                          onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+                        >
+                          <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "#0a1f44" }}>{item.label}</span>
+                          <span style={{ fontSize: "0.78rem", color: "#6b7280" }}>{item.desc}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              })()}
+            </div>
+          </div>
+        </>
       )}
 
       {/* Mobile menu */}

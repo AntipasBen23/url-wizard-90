@@ -13,6 +13,7 @@ import vesselInspectImg from "@/assets/vesselinspect.jpeg";
 import safetyImg from "@/assets/safetyimg.jpeg";
 import electImg from "@/assets/electimg.jpeg";
 import armedResponderImg from "@/assets/ArmedResponder-photo.png";
+import gisBlakelyImg from "@/assets/GIS_Blakely_photo.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -124,6 +125,96 @@ const managedVessels = [
         label: "Special Equipment",
         items: [
           { key: "Fire Fighting", value: "Yes" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "GIS Blakely",
+    img: gisBlakelyImg,
+    specGroups: [
+      {
+        label: "General",
+        items: [
+          { key: "Type", value: "Crew Boat / FSV" },
+          { key: "Builder", value: "Breaux Brothers" },
+          { key: "Gross Tonnage", value: "199" },
+          { key: "Net Tonnage", value: "59" },
+          { key: "Built / Rebuild", value: "1991 / 2021" },
+          { key: "Official Number", value: "SR3935" },
+          { key: "USCG Inspection", value: "Yes" },
+          { key: "IMO", value: "8973423" },
+        ],
+      },
+      {
+        label: "Dimensions",
+        items: [
+          { key: "Length", value: "39.62 M" },
+          { key: "Beam", value: "7.92 M" },
+          { key: "Depth", value: "1.9 M" },
+          { key: "Clear Deck", value: "64' × 22' / 18.8 × 6.7 M" },
+          { key: "Clear Deck Area", value: "1,408 sq ft / 429 M²" },
+        ],
+      },
+      {
+        label: "Propulsion",
+        items: [
+          { key: "Main Engines", value: "(4) Cummins KT-19" },
+          { key: "Max HP", value: "2,800" },
+          { key: "Reduction Gear", value: "Twin Disc MG 518" },
+          { key: "Generators", value: "(2) 30 kW Detroit 371" },
+        ],
+      },
+      {
+        label: "Performance",
+        items: [
+          { key: "Max Speed", value: "24 knots @ 100 gph" },
+          { key: "Aux Generators (24hr)", value: "360 ltrs" },
+          { key: "Economic — 1 Engine", value: "1,125 ltrs" },
+          { key: "Economic — 4 Engines", value: "4,500 ltrs" },
+          { key: "Full Cruise — 1 Engine", value: "1,200 ltrs" },
+          { key: "Full Cruise — 4 Engines", value: "4,800 ltrs" },
+          { key: "Total Economic", value: "4,860 ltrs" },
+          { key: "Total Full Cruise", value: "5,040 ltrs" },
+        ],
+      },
+      {
+        label: "Capacities",
+        items: [
+          { key: "Deck Cargo", value: "97 L. Tons / 103T" },
+          { key: "Ballast Water", value: "18T" },
+          { key: "Fuel Oil", value: "54T" },
+          { key: "Potable Water", value: "18T" },
+        ],
+      },
+      {
+        label: "Accommodations",
+        items: [
+          { key: "Cabins / Berths", value: "(1) 1-Man, (3) 2-Men" },
+          { key: "Security Personnel", value: "2 (2) / 1 (4)" },
+          { key: "Certified Capacity", value: "38 / 74 persons" },
+          { key: "Galley Seating", value: "8" },
+          { key: "A/C & Heater", value: "Yes" },
+        ],
+      },
+      {
+        label: "Electronics",
+        items: [
+          { key: "Radars", value: "(2) Furuno" },
+          { key: "Radios", value: "(3) VHF, (1) SSB, (1) FM" },
+          { key: "Fathometer", value: "Yes" },
+          { key: "GPS", value: "Yes" },
+        ],
+      },
+      {
+        label: "Special Equipment",
+        items: [
+          { key: "Ballistic Protection", value: "NATO certified — stops 8.762×39 (AK-47), full crew area to bridge" },
+          { key: "Windows", value: "All ballistic" },
+          { key: "Doors", value: "All ballistic" },
+          { key: "Safe Haven", value: "Below crew deck" },
+          { key: "Fire Fighting", value: "Yes" },
+          { key: "USCG Certified", value: "200 miles offshore" },
         ],
       },
     ],

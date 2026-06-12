@@ -5,7 +5,7 @@ import ceoIsrael from "@/assets/CEO Isreal.jpeg";
 import giftIsrael from "@/assets/gift isreal.jpeg";
 import josephGazz from "@/assets/joe gazz1.jpeg";
 import sundayKennedy from "@/assets/sunday kennedy.jpeg";
-import ngobiChristopher from "@/assets/ngobi christopher.png";
+import ngobiChristopher from "@/assets/ngobi christopher.jpeg";
 import lindsay from "@/assets/lindsay.jpeg";
 import davidUdosen from "@/assets/David udosen.png";
 import awofidipe from "@/assets/awofidipe.jpeg";
@@ -61,8 +61,9 @@ const teamMembers = [
   {
     img: ngobiChristopher,
     title: "General Manager",
-    name: "Ngobi Christopher Godwin",
-    qualifications: "HND, BSC, MSTIT, M.ENG, ECE — Electrical & Electronics, Marine Technician",
+    name: "Engr. Ngobi Christopher Godwin",
+    qualifications: "HND, BSc, MScIT, M.Eng — Electronics & Computer Engineering",
+    bio: "A registered Electrical and Electronic Engineer with vast experience in both domestic and marine electrical and electronics. A project manager par excellence.",
     country: "Nigeria",
     flag: "🇳🇬",
   },
@@ -208,6 +209,9 @@ function AboutPage() {
                   <p className="text-[11px] font-medium uppercase tracking-widest text-accent">{member.title}</p>
                   <p className="mt-1 text-sm font-bold text-primary">{member.name}</p>
                   <p className="mt-0.5 text-[11px] text-muted-foreground/80 italic">({member.qualifications})</p>
+                  {"bio" in member && member.bio && (
+                    <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">{member.bio}</p>
+                  )}
                   <p className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                     <span>{member.flag}</span>
                     {member.country}

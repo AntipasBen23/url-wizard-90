@@ -12,6 +12,7 @@ import indusImg from "@/assets/indus.png";
 import vesselInspectImg from "@/assets/vesselinspect.jpeg";
 import safetyImg from "@/assets/safetyimg.jpeg";
 import electImg from "@/assets/electimg.jpeg";
+import armedResponderImg from "@/assets/ArmedResponder-photo.png";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -38,6 +39,95 @@ const drillingItems = [
   "Mud engineering services.",
   "Supply processed drilling materials such as Calcium Carbonate, Bentonite, Barite.",
   "Supply of drilling and work-over fluids.",
+];
+
+const managedVessels = [
+  {
+    name: "Armed Responder",
+    img: armedResponderImg,
+    specGroups: [
+      {
+        label: "General",
+        items: [
+          { key: "Type", value: "Crew Boat" },
+          { key: "Owner", value: "GIS Marine" },
+          { key: "Builder", value: "Breaux Brothers" },
+          { key: "Gross Tonnage", value: "93" },
+          { key: "Net Tonnage", value: "67" },
+          { key: "Year Built", value: "1996" },
+          { key: "Official Number", value: "1048707" },
+          { key: "USCG Inspection", value: "Yes" },
+          { key: "ABS Loadline", value: "Yes" },
+        ],
+      },
+      {
+        label: "Dimensions",
+        items: [
+          { key: "Length", value: "145'" },
+          { key: "Beam", value: "28'" },
+          { key: "Depth", value: "11.66'" },
+          { key: "Clear Deck", value: "83' × 23'" },
+          { key: "Clear Deck Sq Ft", value: "1,909 sq ft" },
+          { key: "Deadweight", value: "260 Long Tons" },
+        ],
+      },
+      {
+        label: "Propulsion",
+        items: [
+          { key: "Main Engines", value: "(5) Cummins QSK 19M" },
+          { key: "Max HP", value: "3,500" },
+          { key: "Reduction Gear", value: "Twin Disc 5202" },
+          { key: "Propellers", value: '(5) 39" × 36"' },
+          { key: "Generators", value: "(2) 50kw — Cummins" },
+          { key: "Bow Thruster", value: "N/A" },
+        ],
+      },
+      {
+        label: "Performance",
+        items: [
+          { key: "Max Speed", value: "24 knots @ 167 gph" },
+          { key: "Cruising Speed", value: "22 knots @ 150 gph" },
+          { key: "Cargo Water", value: "600 gpm @ 130 ft" },
+          { key: "Fuel Oil Transfer", value: "90 gpm @ 100 ft" },
+          { key: "Potable Water", value: "600 gpm @ 130 ft" },
+        ],
+      },
+      {
+        label: "Capacities",
+        items: [
+          { key: "Deck Cargo", value: "240 Long Tons" },
+          { key: "Ballast Water", value: "35,700 gals" },
+          { key: "Fuel Oil", value: "18,100 gals" },
+          { key: "Potable Water", value: "1,200 gals" },
+          { key: "Lube Oil", value: "336 gals" },
+        ],
+      },
+      {
+        label: "Accommodations",
+        items: [
+          { key: "Cabins / Berths", value: "(4) 2-Man" },
+          { key: "Certified Capacity", value: "85 persons" },
+          { key: "Galley Seating", value: "8" },
+          { key: "A/C & Heater", value: "Yes" },
+        ],
+      },
+      {
+        label: "Electronics",
+        items: [
+          { key: "Radars", value: "(2) Furuno" },
+          { key: "Radios", value: "(2) VHF, (1) SSB" },
+          { key: "Fathometer", value: "Yes" },
+          { key: "GPS", value: "Garmin" },
+        ],
+      },
+      {
+        label: "Special Equipment",
+        items: [
+          { key: "Fire Fighting", value: "Yes" },
+        ],
+      },
+    ],
+  },
 ];
 
 function ServicesPage() {
@@ -158,6 +248,61 @@ function ServicesPage() {
             </div>
 
           </div>
+
+          {/* ── Vessels Under Management ── */}
+          <div className="mt-20">
+            <p className="eyebrow mb-3">Track Record</p>
+            <h3 className="text-2xl font-bold text-primary sm:text-3xl">Vessels Under Management</h3>
+            <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              A selection of vessels B &amp; R Marine has managed on behalf of owners and operators worldwide.
+            </p>
+            <div className="mt-10 space-y-8">
+              {managedVessels.map((vessel) => (
+                <div key={vessel.name} className="overflow-hidden rounded-sm border border-border bg-white shadow-sm">
+                  {/* Card header — photo + name */}
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="h-[260px] shrink-0 overflow-hidden sm:w-[360px]">
+                      <img
+                        src={vessel.img}
+                        alt={vessel.name}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-end bg-primary p-6 sm:flex-1">
+                      <p className="eyebrow text-accent mb-2">Managed Vessel</p>
+                      <h4 className="text-2xl font-bold text-primary-foreground sm:text-3xl">{vessel.name}</h4>
+                      <p className="mt-2 text-sm text-primary-foreground/60">
+                        {vessel.specGroups[0].items.find(i => i.key === "Type")?.value}
+                        {" · "}
+                        Built {vessel.specGroups[0].items.find(i => i.key === "Year Built")?.value}
+                        {" · "}
+                        Owner: {vessel.specGroups[0].items.find(i => i.key === "Owner")?.value}
+                      </p>
+                    </div>
+                  </div>
+                  {/* Spec groups grid */}
+                  <div className="grid grid-cols-2 gap-px bg-border sm:grid-cols-3 lg:grid-cols-4">
+                    {vessel.specGroups.map((group) => (
+                      <div key={group.label} className="bg-white px-5 py-5">
+                        <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.12em] text-accent">
+                          {group.label}
+                        </p>
+                        <dl className="space-y-2">
+                          {group.items.map((item) => (
+                            <div key={item.key}>
+                              <dt className="text-[10px] text-muted-foreground">{item.key}</dt>
+                              <dd className="text-[12px] font-semibold text-primary">{item.value}</dd>
+                            </div>
+                          ))}
+                        </dl>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 

@@ -14,6 +14,7 @@ import safetyImg from "@/assets/safetyimg.jpeg";
 import electImg from "@/assets/electimg.jpeg";
 import armedResponderImg from "@/assets/ArmedResponder-photo.png";
 import gisBlakelyImg from "@/assets/GIS_Blakely_photo.png";
+import marilysAJImg from "@/assets/Marilys AJ.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -215,6 +216,35 @@ const managedVessels = [
           { key: "Safe Haven", value: "Below crew deck" },
           { key: "Fire Fighting", value: "Yes" },
           { key: "USCG Certified", value: "200 miles offshore" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Marilys AJ",
+    img: marilysAJImg,
+    specGroups: [
+      {
+        label: "General",
+        items: [
+          { key: "IMO Number", value: "8119613" },
+          { key: "Ship Type", value: "Offshore Tug / Supply Ship" },
+          { key: "Flag", value: "Unknown" },
+          { key: "Year Built", value: "1982" },
+        ],
+      },
+      {
+        label: "Dimensions",
+        items: [
+          { key: "Length Overall", value: "56.40 m" },
+          { key: "Beam", value: "13.80 m" },
+        ],
+      },
+      {
+        label: "Tonnage & Weight",
+        items: [
+          { key: "Gross Tonnage", value: "1,398" },
+          { key: "Deadweight", value: "1,059 t" },
         ],
       },
     ],

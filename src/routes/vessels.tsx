@@ -266,15 +266,18 @@ function VesselsPage() {
       {/* Page banner */}
       <section className="bg-primary pt-32 pb-16">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-          <p className="eyebrow text-accent">Our Fleet</p>
+          <p className="eyebrow text-accent">Our Track Record</p>
           <h1 className="mt-4 text-5xl font-bold text-primary-foreground sm:text-6xl">Vessels</h1>
+          <p className="mt-4 max-w-2xl text-lg text-primary-foreground/70">
+            A record of vessels B &amp; R Marine has built, designed, and delivered across commercial, defence, and research sectors.
+          </p>
         </div>
       </section>
 
       {/* ── Cargo / Commercial Vessels ── */}
       <section id="cargo-commercial" className="py-24 bg-background">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-          <p className="eyebrow mb-4">Category 01</p>
+          <p className="eyebrow mb-4">Vessel Type 01</p>
           <h2 className="text-3xl font-bold text-primary sm:text-4xl">Cargo / Commercial Vessels</h2>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
             BRL's expertise has been applied to specialised small cargo ships and work boats including custom designed
@@ -298,7 +301,7 @@ function VesselsPage() {
       {/* ── Defence and Patrol Vessels ── */}
       <section id="defence-patrol" className="py-24 bg-secondary">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-          <p className="eyebrow mb-4">Category 02</p>
+          <p className="eyebrow mb-4">Vessel Type 02</p>
           <h2 className="text-3xl font-bold text-primary sm:text-4xl">Defence and Patrol Vessels</h2>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
             BRL has worked with government and commercial clients on various projects in the naval / defence /
@@ -316,7 +319,7 @@ function VesselsPage() {
       {/* ── Fishing and Research Vessels ── */}
       <section id="fishing-research" className="py-24 bg-background">
         <div className="mx-auto max-w-[1400px] px-5 lg:px-10">
-          <p className="eyebrow mb-4">Category 03</p>
+          <p className="eyebrow mb-4">Vessel Type 03</p>
           <h2 className="text-3xl font-bold text-primary sm:text-4xl">Fishing and Research Vessels</h2>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
             BRL has been involved in the design and development of specialised fishing and research vessels,

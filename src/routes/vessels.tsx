@@ -14,7 +14,7 @@ import alcyoneVessel from "@/assets/apollo s.jpeg";
 import apolloSVessel from "@/assets/apollo s.jpeg";
 import discoveryIII from "@/assets/discovery iii.jpg";
 import nalenaBay from "@/assets/nalena bay.jpeg";
-import josephConrad from "@/assets/joseph conrad.jpg";
+import josephConrad from "@/assets/joseph conrad.jpeg";
 import rvMeen from "@/assets/Rv meen.jpg";
 
 export const Route = createFileRoute("/vessels")({
